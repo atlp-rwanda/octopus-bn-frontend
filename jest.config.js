@@ -10,4 +10,7 @@ module.export = {
     "@testing-library/jest-dom/extend-expect",
     "@testing-library/react/cleanup-after-each",
   ],
+  collectCoverage: true,
+  collectCoverageFrom: ["src/{renderer}/**/*.{js,jsx}"],
+  coverageReporters: ["lcov"],
 };
