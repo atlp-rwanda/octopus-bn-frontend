@@ -10,6 +10,7 @@ module.exports = {
 		}
 	},
 	entry: './src/index',
+	stats: 'errors-only',
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		publicPath: '/',
