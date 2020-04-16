@@ -1,1 +1,1 @@
-# octopus bn front-end
+# Barefoot Nomad - Frontend
