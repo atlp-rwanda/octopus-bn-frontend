@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+       Barefoot Nomad!change while setting up anything!! 
+    </h1>
+  </div>
+</DocumentFragment>
+`;
