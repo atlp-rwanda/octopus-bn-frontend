@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import { Provider } from 'react-redux';
+import Counter from '../src/components/Counter';
+
+import store from './redux/store';
 
 class App extends Component {
-	render() {
+	render(){
 		return (
-			<div className="center">
-				<h1> Barefoot Nomad!change while setting up anything!! </h1>
-			</div>
-		);
+	 <Provider store = {store}>
+         <div className="center">
+             <Counter counter/>
+          </div>
+     </Provider>
+	  );
 	}
+
 }
 
 export default App;
