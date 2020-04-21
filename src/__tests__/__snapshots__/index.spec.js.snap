@@ -5,32 +5,9 @@ exports[`renders the component 1`] = `
   <div
     class="center"
   >
-    <div
-      style="text-align: center; display: inline-block;"
-    >
-      <h1>
-        Barefoot Nomad! change while setting up anything!!
-      </h1>
-      <h1>
-        Our Genius Counter 
-      </h1>
-      <input
-        style="font-size: 20px;"
-        title="Increase"
-        type="button"
-        value="+"
-      />
-       
-      <input
-        style="font-size: 20px;"
-        title="Decrease"
-        type="button"
-        value="-"
-      />
-      <h2>
-         My Count is 0 
-      </h2>
-    </div>
+    <h1>
+       Dummy Home Page
+    </h1>
   </div>
 </DocumentFragment>
 `;
