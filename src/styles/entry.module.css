@@ -1,0 +1,142 @@
+body
+h1 {
+    padding: 0;
+    margin: 0;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.side {
+    float: left;
+    height: 100vh;
+    width: 35%;
+    background: #2196f3;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.forms {
+    float: left;
+    width: 65%;
+}
+
+.wrap {
+    width: 45%;
+    height: auto;
+    margin-top: 15vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputs {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.text_wrap {
+    margin: auto;
+    margin-top: 40vh;
+    width: 80%;
+    text-align: center;
+    color: white;
+    height: auto;
+}
+
+.form_top_text {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.link {
+    color: #2196f3;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.fs_title {
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.fs_subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.or_div {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    height: 1px;
+    background-color: #dddddd;
+    margin-top: 25px;
+}
+
+.or_text {
+    position: absolute;
+    top: -10px;
+    width: 40px;
+    color: #666;
+    background-color: white;
+    left: 42%;
+}
+
+.svg_div {
+    position: relative;
+    width: 100%;
+}
+
+.svg {
+    position: absolute;
+    width: 579px;
+    height: 363px;
+    left: 431px;
+    top: 243px;
+
+    opacity: 0.1;
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .side {
+        float: left;
+        height: 30vh;
+        width: 100%;
+    }
+    .forms {
+        float: left;
+        width: 100%;
+    }
+
+.wrap {
+    width: 80%;
+    height: auto;
+    margin-top: 5vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+    .text_wrap {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10vh;
+        width: 80%;
+        text-align: center;
+        color: white;
+    }
+    .svg_div {
+        width: 100%;
+    }
+    
+    .svg {
+        width: 345px;
+        height: 230px;
+        left:10px;
+        top: 50vh;
+    }
+    .link {
+        margin-top: 10px;
+    }
+}

@@ -3,15 +3,15 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 // A custom theme for this app
 const theme = createMuiTheme({
+	typography: {
+		fontFamily: '"Trebuchet MS", sans-serif'
+	},
 	palette: {
 		primary: {
-			main: '#556cd6'
+			main: '#2196f3'
 		},
 		secondary: {
-			main: '#19857b'
-		},
-		error: {
-			main: red.A400
+			main: '#f50057'
 		},
 		background: {
 			default: '#fff'

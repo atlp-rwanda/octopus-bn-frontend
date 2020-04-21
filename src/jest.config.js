@@ -11,6 +11,7 @@ module.export = {
     "@testing-library/react/cleanup-after-each",
   ],
   collectCoverage: true,
+  'testEnvironment': 'node',
   collectCoverageFrom: ["src/{renderer}/**/*.{js,jsx}"],
   coverageReporters: ["lcov"],
 };

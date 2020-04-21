@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the component 1`] = `
+exports[`LOGIN should render login component 1`] = `
 <DocumentFragment>
   <div>
     <div>
