@@ -1,6 +1,8 @@
 # Barefoot Nomad - Frontend
 
-[![Build Status](https://travis-ci.org/andela/octopus-bn-frontend.svg?branch=develop)](https://travis-ci.org/andela/octopus-bn-frontend) [![Coverage Status](https://coveralls.io/repos/github/andela/octopus-bn-frontend/badge.svg?branch=develop)](https://coveralls.io/github/andela/octopus-bn-frontend?branch=develop) [![Maintainability](https://api.codeclimate.com/v1/badges/efbdaa199a4e426ce288/maintainability)](https://codeclimate.com/github/andela/octopus-bn-frontend/maintainability)
+[![Build Status](https://travis-ci.org/Stackup-Rwanda/octopus-bn-frontend.svg?branch=develop)](https://travis-ci.org/Stackup-Rwanda/octopus-bn-frontend)
+[![Coverage Status](https://coveralls.io/repos/github/Stackup-Rwanda/octopus-bn-frontend/badge.svg?branch=develop)](https://coveralls.io/github/Stackup-Rwanda/octopus-bn-frontend?branch=develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fab681eda7169547accf/maintainability)](https://codeclimate.com/github/Stackup-Rwanda/octopus-bn-frontend/maintainability)
 
 # Description ✍︎
 
@@ -21,7 +23,7 @@ Making company travel and accomodation easy and convenient.
 
 Clone the repository on your local computer using the command below
 
-> `git clone https://github.com/andela/octopus-bn-frontend.git`
+> `git clone https://github.com/Stackup-Rwanda/octopus-bn-frontend.git`
 
 Install all project dependencies using the command below
 
@@ -65,7 +67,7 @@ Components are documented using storybook, to run storybook dashboard use the co
 
 # Deployment 🚀
 
-[Heroku]()
+[Heroku](https://octopus-bn-frontend.herokuapp.com/)
 
 # Authors
 
