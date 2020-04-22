@@ -10,7 +10,8 @@
     "test": "jest -c",
     "test:watch": "jest --watch",
     "storybook": "start-storybook",
-    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
