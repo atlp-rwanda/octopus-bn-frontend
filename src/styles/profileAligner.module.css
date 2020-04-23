@@ -1,0 +1,18 @@
+.SideIntro {
+    float: left;
+    height: 100vh;
+    width: 20%;
+    }
+    .SvgDiv {
+      position: relative;
+      width: 50%;
+    }
+    
+    @media screen and (max-width: 500px) {
+
+      .SvgDiv {
+        width: 100%;
+      }
+
+    }
+    

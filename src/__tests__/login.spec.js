@@ -61,16 +61,7 @@ describe('LOGIN', () => {
 		form.dispatchEvent(new Event('submit'));
 		waitFor(() => expect(getByText('Requires valid email')).toBeTruthy());
 	});
-	it('should display error message if email and/or password are wrong', async () => {
-		const { getByLabelText, getByText, getByTestId, container, debug } = LoginComponent();
-		const email = getByLabelText('email');
-		const password = getByLabelText('password');
-		const form = container.querySelector('form');
-		userEvent.type(email, 'email@gmail.com');
-		userEvent.type(password, 'wrong');
-		form.dispatchEvent(new Event('submit'));
-		waitFor(() => expect(getByText('Incorrect username or password combination')).toBeTruthy());
-	});
+	
 	it('should display error message if email and/or password are wrong', async () => {
 		const { getByLabelText, getByText, getByTestId, container, debug } = LoginComponent();
 		const email = getByLabelText('email');
