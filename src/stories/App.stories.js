@@ -5,5 +5,4 @@ import App from "../App";
 export default {
   title: "Welcome",
 };
-
 export const app = () => <App />;

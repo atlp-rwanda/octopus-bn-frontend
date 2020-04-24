@@ -1,16 +1,6 @@
+import { USER_SIGN_UP } from "../types/SignupTypes";
 
-const increment = n => {
-    return {
-      type: "INCREMENT",
-      payload: n
-    };
-  };
-  
-  const decrement = n => {
-    return {
-      type: "DECREMENT",
-      payload: n
-    };
-  };
-  
-  export { increment, decrement };
+export const userSignUp = (user) => ({
+  type: USER_SIGN_UP,
+  user,
+});
