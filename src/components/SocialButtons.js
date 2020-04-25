@@ -6,10 +6,10 @@ export default class SocialButtons extends Component {
 		super(props);
 	}
 	facebookRedirect = () => {
-		window.location.href = 'https://octopus-bn-backend.herokuapp.com/api/v1/auth/facebook';
+		window.location.assign('https://octopus-bn-backend.herokuapp.com/api/v1/auth/facebook');
 	};
 	googleRedirect = () => {
-		window.location.href = 'https://octopus-bn-backend.herokuapp.com/api/v1/auth/google';
+		window.location.assign('https://octopus-bn-backend.herokuapp.com/api/v1/auth/google');
 	};
 	render() {
 		return (

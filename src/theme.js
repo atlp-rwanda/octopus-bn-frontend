@@ -1,7 +1,7 @@
 import { red } from "@material-ui/core/colors";
 import { createMuiTheme } from "@material-ui/core/styles";
 // A custom theme for this app
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   typography: {
     fontFamily: '"Trebuchet MS", sans-serif',
   },
@@ -17,4 +17,16 @@ const theme = createMuiTheme({
     },
   },
 });
-export default theme;
+
+export const LabelTheme = createMuiTheme({
+	overrides: {
+	  MuiInputLabel: { 
+		root: { 
+		  color: "black",
+		  "&$focused": { // increase the specificity for the pseudo class
+			color: "black"
+		  }
+		}
+	  }
+	}
+  });

@@ -6,5 +6,13 @@
     "forget-password": "Mot de passe oublié?",
     "or": "Ou",
     "password": "Mot de passe",
-    "lost":"Perdu? rentrons"
+    "lost":"Perdu? rentrons",
+    "password-gone": "Réinitialisez votre mot de passe",
+    "link-promise": "Nous vous enverrons un lien de réinitialisation de mot de passe.",
+    "email": "E-mail",
+    "send": "Envoyer",
+    "network-error": "Oops! Erreur réseau.",
+    "valid-mail": "Nécessite un e-mail valide",
+    "user-exists-not": "L'email fourni n'existe pas, créez un compte",
+    "process-message": "Veuillez vérifier un e-mail que nous vous avons envoyé pour terminer le processus."
 }

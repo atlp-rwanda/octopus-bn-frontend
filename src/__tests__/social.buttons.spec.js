@@ -22,7 +22,16 @@ const SocialButtonsComponent = () => {
 
 
 describe('LOST', () => {
-	afterEach(cleanup);
+	const {location } = window;
+	beforeAll(()=>{
+		delete window.location;
+    	window.location = { assign: jest.fn() };
+	})
+
+	afterAll(()=>{
+		cleanup;
+		window.location = location;
+	});
 	it('should render social buttons', () => {
 		const { asFragment } = SocialButtonsComponent();
 		expect(asFragment(<SocialButtons />)).toMatchSnapshot();

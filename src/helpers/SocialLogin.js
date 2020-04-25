@@ -14,9 +14,9 @@ export default class SocialLogin extends Component {
 			const token = JSON.parse(data)[2];
 			localStorage.setItem('bn-token', token);
 			localStorage.setItem('bn-user-data', JSON.stringify(user));
-			window.location.href = `/dashboard`;
+			window.location.assign('/dashboard');
 		} catch (error) {
-			window.location.href = `/lost`;
+			window.location.assign('/lost');
 		}
 	}
 	render() {
