@@ -10,6 +10,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import { connect } from 'react-redux';
 import { loginAction, closeMessage } from '../redux/actions/loginAction';
 import { LinearProgress } from '@material-ui/core';
+import translate from '../languages/translate';
+import LanguageButtons from './LanguageButtons';
 
 class LoginForm extends Component {
 	constructor(props) {
@@ -76,10 +78,11 @@ class LoginForm extends Component {
 					<div style={{ display: this.props.loginSate.loading }}>
 						<LinearProgress />
 					</div>
+					<LanguageButtons />
 					<div className={styles.wrap}>
 						<div className={styles.form_top_text}>
-							<p className={styles.fs_title}>Sign In</p>
-							<p className={styles.fs_subtitle}>Please fill the form</p>
+							<p className={styles.fs_title}>{translate('sign-in')}</p>
+							<p className={styles.fs_subtitle}>{translate('fill-form')}</p>
 							<Button
 								variant="contained"
 								style={{ textTransform: 'capitalize', marginRight: '20px', width: '136px' }}
@@ -99,7 +102,7 @@ class LoginForm extends Component {
 								Facebook
 							</Button>
 							<div className={styles.or_div}>
-								<div className={styles.or_text}>Or</div>
+								<div className={styles.or_text}>{translate('or')}</div>
 							</div>
 						</div>
 						<form className="form" onSubmit={(e) => this.onSubmit(e)} aria-label="form">
@@ -116,7 +119,7 @@ class LoginForm extends Component {
 								value={this.state.email}
 								onChange={(e) => this.change(e)}
 							/>
-							<p className={styles.link}>Forgot password?</p>
+							<p className={styles.link}>{translate('forget-password')}</p>
 							<TextField
 								error={this.state.passwordErrorStatus}
 								className={styles.inputs}
@@ -124,7 +127,7 @@ class LoginForm extends Component {
 								inputProps={{
 									'aria-label': 'password'
 								}}
-								label="Password"
+								label={translate('password')}
 								type="password"
 								autoComplete="current-password"
 								variant="outlined"
@@ -132,7 +135,7 @@ class LoginForm extends Component {
 								value={this.state.password}
 								onChange={(e) => this.change(e)}
 							/>
-							<p className={styles.link}>Have no account?</p>
+							<p className={styles.link}>{translate('no-account')}</p>
 							<Button
 								type="submit"
 								aria-label="submit"
@@ -146,7 +149,7 @@ class LoginForm extends Component {
 								}}
 								disableElevation
 							>
-								signin
+								{translate('sign-in')}
 							</Button>
 						</form>
 					</div>
