@@ -11,6 +11,7 @@ import isEmail from 'validator/lib/isEmail';
 import { LinearProgress } from '@material-ui/core';
 import styles from '../styles/signup.module.css';
 import translate from '../languages/translate';
+import SocialButtons from './SocialButtons';
 
 class SignupForm extends React.Component {
 	state = {
@@ -86,32 +87,7 @@ class SignupForm extends React.Component {
 						<div className={styles.form_top_text}>
 							<p className={styles.fs_title}>Sign Up</p>
 							<p className={styles.fs_subtitle}>{translate('fill-form')}</p>
-							<Button
-								variant="contained"
-								style={{
-									textTransform: 'capitalize',
-									marginRight: '20px',
-									width: '136px'
-								}}
-								color="secondary"
-								startIcon={<FaGoogle />}
-								disableElevation
-							>
-								Google
-							</Button>
-							<Button
-								variant="contained"
-								style={{
-									textTransform: 'capitalize',
-									marginLeft: '20px',
-									width: '136px'
-								}}
-								color="primary"
-								startIcon={<FaFacebookF />}
-								disableElevation
-							>
-								Facebook
-							</Button>
+							<SocialButtons />
 							<div className={styles.or_div}>
 								<div className={styles.or_text}>Or</div>
 							</div>

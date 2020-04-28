@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, cleanup, waitFor } from '@testing-library/react';
+import { render, fireEvent, cleanup, waitFor, waitForElement } from '@testing-library/react';
 import Login from '../views/Login.View';
 import Svg from '../components/SvgMap';
 import { Provider } from 'react-redux';
@@ -76,20 +76,11 @@ describe('LOGIN', () => {
 		const email = getByLabelText('email');
 		const password = getByLabelText('password');
 		const form = container.querySelector('form');
-		userEvent.type(email, 'email@gmail.com');
-		userEvent.type(password, 'wrong');
-		form.dispatchEvent(new Event('submit'));
-		waitFor(() => expect(getByText('Incorrect username or password combination')).toBeTruthy());
-	});
-	it('should display error message if email and/or password are wrong', async () => {
-		const { getByLabelText, getByText, getByTestId, container, debug } = LoginComponent();
-		const email = getByLabelText('email');
-		const password = getByLabelText('password');
-		const form = container.querySelector('form');
 		userEvent.type(email, 'example@gmail.com');
 		userEvent.type(password, 'password');
 		form.dispatchEvent(new Event('submit'));
 		waitFor(() => expect(getByText('Please update your profile information to continue')).toBeTruthy());
+		waitForElement(() => fireEvent.click(getByLabelText('Close')));
 	});
 
 	it('should login successfully', async () => {

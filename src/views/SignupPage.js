@@ -5,6 +5,7 @@ import SignupForm from "../components/SignupForm";
 import Svg from "../components/SvgMap";
 import styles from "../styles/signup.module.css";
 import { signup } from "../redux/actions/signupAction";
+import { Redirect } from 'react-router-dom';
 
 class SignupPage extends React.Component {
   submit = (data) =>
@@ -13,6 +14,11 @@ class SignupPage extends React.Component {
       .then(() => this.props.history.push("/verify-email"));
 
   render() {
+    const token = localStorage.getItem('bn-token');
+		const user = localStorage.getItem('bn-user-data');
+		if(token){
+			return <Redirect to='/dashboard' />
+		}
     return (
       <div className={styles.container}>
         <div className={styles.side}>
