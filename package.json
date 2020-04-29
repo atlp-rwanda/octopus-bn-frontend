@@ -82,6 +82,7 @@
     "material-ui-pickers": "^2.2.4",
     "nyc": "^15.0.1",
     "query-string": "^6.12.1",
+    "qs": "^6.9.3",
     "react": "^16.5.2",
     "react-country-flag": "^2.0.1",
     "react-dom": "^16.5.2",
