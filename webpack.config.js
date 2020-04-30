@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: "development",
@@ -53,6 +54,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new Dotenv(),
     new webpack.DefinePlugin({
       PRODUCTION_API: JSON.stringify(
         "https://octopus-bn-backend.herokuapp.com/api/v1/"

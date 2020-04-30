@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import styles from '../styles/entry.module.css';
 import axios from 'axios';
 import Snackbar from '@material-ui/core/Snackbar';
@@ -12,6 +11,8 @@ import { loginAction, closeMessage } from '../redux/actions/loginAction';
 import { LinearProgress } from '@material-ui/core';
 import translate from '../languages/translate';
 import LanguageButtons from './LanguageButtons';
+import { BrowserRouter, Link, Redirect } from 'react-router-dom';
+import SocialButtons from './SocialButtons';
 
 class LoginForm extends Component {
 	constructor(props) {
@@ -83,24 +84,7 @@ class LoginForm extends Component {
 						<div className={styles.form_top_text}>
 							<p className={styles.fs_title}>{translate('sign-in')}</p>
 							<p className={styles.fs_subtitle}>{translate('fill-form')}</p>
-							<Button
-								variant="contained"
-								style={{ textTransform: 'capitalize', marginRight: '20px', width: '136px' }}
-								color="secondary"
-								startIcon={<FaGoogle />}
-								disableElevation
-							>
-								Google
-							</Button>
-							<Button
-								variant="contained"
-								color="primary"
-								startIcon={<FaFacebookF />}
-								style={{ textTransform: 'capitalize', marginLeft: '20px', width: '136px' }}
-								disableElevation
-							>
-								Facebook
-							</Button>
+							<SocialButtons />
 							<div className={styles.or_div}>
 								<div className={styles.or_text}>{translate('or')}</div>
 							</div>
@@ -167,8 +151,8 @@ class LoginForm extends Component {
 					}}
 					message={<span id="message-id">{this.props.loginSate.error}</span>}
 					action={[
-						<IconButton key="close" aria-label="Close" color="inherit" onClick={this.props.closeMessage}>
-							<CloseIcon />
+						<IconButton key="close" color="inherit" onClick={this.props.closeMessage}>
+							<CloseIcon aria-label="Close" />
 						</IconButton>
 					]}
 				/>

@@ -1,0 +1,16 @@
+.svg{
+width: 40%;
+height: 30vh;
+margin-left: 30%;
+margin-top: 20vh;
+}
+
+.text{
+text-align: center;
+margin-top: 20px;
+}
+.link {
+    color: #2196f3;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
