@@ -16,6 +16,7 @@ const reducer = (state = initialState, action) => {
 				open: false
 			};
 		case LOGIN_USER_SUCCESS:
+			console.log(action.payload);
 			return {
 				loading: 'none',
 				user: action.payload,
