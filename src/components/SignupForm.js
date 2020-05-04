@@ -9,9 +9,11 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import isEmail from 'validator/lib/isEmail';
 import { LinearProgress } from '@material-ui/core';
-import styles from '../styles/signup.module.css';
+import styles from '../styles/entry.module.css';
 import translate from '../languages/translate';
 import SocialButtons from './SocialButtons';
+import SvgMap from './SvgMap';
+import LanguageButtons from './LanguageButtons';
 
 class SignupForm extends React.Component {
 	state = {
@@ -79,10 +81,20 @@ class SignupForm extends React.Component {
 		const { data, errors, loading, open } = this.state;
 		return (
 			<div>
+				<SvgMap />
+
+				<div className={styles.side}>
+					<div className={styles.text_wrap}>
+						<h1>Barefoot Nomad</h1>
+						<p>{translate('bn-value')}</p>
+					</div>
+				</div>
+			
 				<div className={styles.forms}>
 					<div style={{ display: loading }}>
 						<LinearProgress />
 					</div>
+					<LanguageButtons />
 					<div className={styles.wrap}>
 						<div className={styles.form_top_text}>
 							<p className={styles.fs_title}>Sign Up</p>
@@ -149,17 +161,10 @@ class SignupForm extends React.Component {
 								value={data.password}
 								onChange={this.onChange}
 							/>
-							<div
-								style={{
-									float: 'left',
-									marginTop: '20px'
-								}}
-								className={styles.link}
-							>
-								<Link to="/" className={styles.link}>
-									Already have an account?
-								</Link>
-							</div>
+
+							<Link to="/" className={styles.link}>
+								Already have an account?
+							</Link>
 							<Button
 								type="submit"
 								aria-label="submit"

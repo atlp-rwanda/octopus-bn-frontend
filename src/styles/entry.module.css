@@ -46,9 +46,16 @@ h1 {
 }
 
 .link {
+    text-decoration: none;
+    cursor: pointer;
     color: #2196f3;
-    margin-bottom: 30px;
+   position: relative;
+    margin-bottom: 12px;
+    margin-top: 12px;
     float: left;
+}
+.link:hover{
+    color: #f50057;
 }
 
 .fs_title {

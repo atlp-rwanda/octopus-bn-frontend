@@ -8,8 +8,8 @@ export default class Lost extends Component {
 		return (
 			<div>
 				<SvgLost />
-				<p className={styles.text} aria-label= 'lost-text'>
-				{translate('lost')}{' '}
+				<p className={styles.text} aria-label="lost-text">
+					{translate('lost')}{' '}
 					<Link to="/" className={styles.link}>
 						Home
 					</Link>

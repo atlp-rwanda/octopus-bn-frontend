@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LOST should render Drawer component 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="makeStyles-toolbar-6"
+    />
+    <hr
+      class="MuiDivider-root"
+    />
+    <ul
+      class="MuiList-root MuiList-padding"
+    >
+      <a
+        href="/dashboard"
+        style="text-decoration: none; color: rgb(0, 0, 0);"
+      >
+        <div
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemIcon-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+          </div>
+          <div
+            class="MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            >
+              Dashboard
+            </span>
+          </div>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </div>
+      </a>
+      <a
+        href="/requests"
+        style="text-decoration: none; color: rgb(0, 0, 0);"
+      >
+        <div
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemIcon-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M2.5 19h19v2h-19v-2zm19.57-9.36c-.21-.8-1.04-1.28-1.84-1.06L14.92 10l-6.9-6.43-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 2.59 4.49s7.12-1.9 16.57-4.43c.81-.23 1.28-1.05 1.07-1.85z"
+              />
+            </svg>
+          </div>
+          <div
+            class="MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            >
+              My Requests
+            </span>
+          </div>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </div>
+      </a>
+    </ul>
+    <div
+      aria-label="logoutClick"
+      class="makeStyles-logout-13"
+    >
+      <hr
+        class="MuiDivider-root"
+      />
+      <div
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="MuiListItemIcon-root"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"
+            />
+          </svg>
+        </div>
+        <div
+          class="MuiListItemText-root"
+        >
+          <span
+            class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+          >
+            Logout
+          </span>
+        </div>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
