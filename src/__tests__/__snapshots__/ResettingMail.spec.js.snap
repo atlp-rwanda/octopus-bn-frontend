@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RESET MAIL SENDER Should render the reset email sender component  1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <div
+        style="display: none;"
+      >
+        <div
+          class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-indeterminate"
+          role="progressbar"
+        >
+          <div
+            class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate"
+          />
+          <div
+            class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorPrimary"
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          aria-label="english-button"
+        >
+          <div
+            class="MuiButtonBase-root MuiChip-root MuiChip-colorPrimary MuiChip-clickableColorPrimary MuiChip-outlined MuiChip-outlinedPrimary MuiChip-clickable"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiChip-icon MuiChip-iconColorPrimary"
+              role="img"
+              style="display: inline-block; font-size: 1.5em; line-height: 1.5em; vertical-align: middle;"
+            >
+              🇺🇸
+            </span>
+            <span
+              class="MuiChip-label"
+            >
+              English
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </div>
+        <div
+          aria-label="french-button"
+        >
+          <div
+            class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiChip-icon"
+              role="img"
+              style="display: inline-block; font-size: 1.5em; line-height: 1.5em; vertical-align: middle;"
+            >
+              🇫🇷
+            </span>
+            <span
+              class="MuiChip-label"
+            >
+              Français
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p>
+            Reset Your Password
+          </p>
+          <p>
+            We will send you a password reset link.
+          </p>
+        </div>
+        <form
+          aria-label="form"
+          class="form"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+            >
+              Email
+            </label>
+            <div
+              aria-label="email"
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+              data-testid="email-input"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                name="email"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-113 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-115"
+                >
+                  <span>
+                    Email
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div>
+            <a
+              href="/signup"
+            >
+              Have no account?
+            </a>
+          </div>
+          <button
+            aria-label="submit"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-disableElevation"
+            tabindex="0"
+            type="submit"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Send
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TESTING RESET EMAIL SENDING ACTIVITY should send a CLOSE_MESSAGE 1`] = `
+Object {
+  "email": "",
+  "error": "",
+  "loading": "none",
+  "open": false,
+}
+`;
+
+exports[`TESTING RESET EMAIL SENDING ACTIVITY should send a SEND_EMAIL_FAILURE 1`] = `
+Object {
+  "email": "",
+  "error": undefined,
+  "loading": "none",
+  "open": true,
+}
+`;
+
+exports[`TESTING RESET EMAIL SENDING ACTIVITY should send a SEND_EMAIL_REQUEST 1`] = `
+Object {
+  "email": "",
+  "error": "",
+  "loading": "block",
+  "open": false,
+}
+`;
+
+exports[`TESTING RESET EMAIL SENDING ACTIVITY should send a SEND_EMAIL_SUCCESS 1`] = `
+Object {
+  "email": undefined,
+  "error": "",
+  "loading": "none",
+  "open": false,
+}
+`;
