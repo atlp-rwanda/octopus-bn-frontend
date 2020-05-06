@@ -10,9 +10,11 @@ import { connect } from 'react-redux';
 import { loginAction, closeMessage } from '../redux/actions/loginAction';
 import { LinearProgress } from '@material-ui/core';
 import translate from '../languages/translate';
-import LanguageButtons from './LanguageButtons';
 import { BrowserRouter, Link, Redirect } from 'react-router-dom';
 import SocialButtons from './SocialButtons';
+import SvgMap from './SvgMap';
+import LanguageButtons from './LanguageButtons';
+import { withRouter } from 'react-router-dom';
 
 class LoginForm extends Component {
 	constructor(props) {
@@ -63,7 +65,7 @@ class LoginForm extends Component {
 				email: this.state.email,
 				password: this.state.password
 			};
-			await this.props.loginAction(send);
+			await this.props.loginAction(send, this.props.history);
 		}
 	};
 
@@ -75,6 +77,13 @@ class LoginForm extends Component {
 	render() {
 		return (
 			<div>
+				<SvgMap />
+				<div className={styles.side}>
+					<div className={styles.text_wrap}>
+						<h1>Barefoot Nomad</h1>
+						<p>{translate('bn-value')}</p>
+					</div>
+				</div>
 				<div className={styles.forms}>
 					<div style={{ display: this.props.loginSate.loading }}>
 						<LinearProgress />
@@ -103,7 +112,9 @@ class LoginForm extends Component {
 								value={this.state.email}
 								onChange={(e) => this.change(e)}
 							/>
-							<p className={styles.link}>{translate('forget-password')}</p>
+							<Link to="/forget" className={styles.link}>
+								{translate('forget-password')}
+							</Link>
 							<TextField
 								error={this.state.passwordErrorStatus}
 								className={styles.inputs}
@@ -119,7 +130,9 @@ class LoginForm extends Component {
 								value={this.state.password}
 								onChange={(e) => this.change(e)}
 							/>
-							<p className={styles.link}>{translate('no-account')}</p>
+							<Link to="/signup" className={styles.link}>
+								{translate('no-account')}
+							</Link>
 							<Button
 								type="submit"
 								aria-label="submit"
@@ -169,9 +182,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		loginAction: (userInfo) => dispatch(loginAction(userInfo)),
+		loginAction: (userInfo, history) => dispatch(loginAction(userInfo, history)),
 		closeMessage: () => dispatch(closeMessage())
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LoginForm));
