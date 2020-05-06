@@ -10,7 +10,6 @@ import SignupForm from "../components/SignupForm";
 import Confirm from "../views/ConfirmEmail";
 import store from "../redux/store";
 import IntlProvider from "../languages/components/IntlProvider";
-
 const signupComponent = () => {
   return render(
     <Provider store={store}>
@@ -38,7 +37,6 @@ describe("SIGN UP", () => {
     const { asFragment } = appComponent();
     expect(asFragment(<App />)).toMatchSnapshot();
   });
-
   it("renders the sign up page", () => {
     const { asFragment } = render(
       <Provider store={store}>
@@ -51,12 +49,10 @@ describe("SIGN UP", () => {
     );
     expect(asFragment(<Signup />)).toMatchSnapshot();
   });
-
   it("renders the svg map", () => {
     const { asFragment } = render(<Svg />);
     expect(asFragment(<Svg />)).toMatchSnapshot();
   });
-
   it("renders the signup form", () => {
     const { asFragment } = render(
       <Provider store={store}>
@@ -69,7 +65,6 @@ describe("SIGN UP", () => {
     );
     expect(asFragment(<SignupForm />)).toMatchSnapshot();
   });
-
   it("renders the confirm page", () => {
     const { asFragment } = render(
       <Provider store={store}>
@@ -80,7 +75,6 @@ describe("SIGN UP", () => {
     );
     expect(asFragment(<Confirm />)).toMatchSnapshot();
   });
-
   it("should be able to deal with data change", () => {
     const { getByLabelText, getByText, container, debug } = signupComponent();
     const firstName = getByLabelText("First Name");
@@ -122,7 +116,6 @@ describe("SIGN UP", () => {
       expect(getByText("Your first name is required")).toBeTruthy()
     );
   });
-
   it("should show an error when there is no lastname provided", () => {
     const {
       getByLabelText,
@@ -144,7 +137,6 @@ describe("SIGN UP", () => {
     form.dispatchEvent(new Event("submit"));
     waitFor(() => expect(getByText("Your last name is required")).toBeTruthy());
   });
-
   it("should show an error when there is no email provided", () => {
     const {
       getByLabelText,
@@ -158,7 +150,6 @@ describe("SIGN UP", () => {
     const email = getByLabelText("email");
     const password = getByLabelText("password");
     const form = container.querySelector("form");
-
     userEvent.type(firstName, "John");
     userEvent.type(lastName, "Doe");
     userEvent.type(email, "");
@@ -166,7 +157,6 @@ describe("SIGN UP", () => {
     form.dispatchEvent(new Event("submit"));
     waitFor(() => expect(getByText("Please enter a valid email")).toBeTruthy());
   });
-
   it("should show an error when there is no password provided", () => {
     const {
       getByLabelText,
