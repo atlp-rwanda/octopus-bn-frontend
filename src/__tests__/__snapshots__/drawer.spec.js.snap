@@ -357,6 +357,13 @@ exports[`LOST should render ResponsiveDrawer component 1`] = `
         </div>
       </div>
     </nav>
+    <main
+      class="makeStyles-content-8"
+    >
+      <div
+        class="makeStyles-toolbar-6"
+      />
+    </main>
   </div>
 </DocumentFragment>
 `;

@@ -5,7 +5,6 @@ import { decode } from '../../utils/jwtTokenizer';
 import { loginUserSuccess } from '../../redux/actions/loginAction';
 import { connect } from 'react-redux';
 import SvgMap from '../../components/SvgMap';
-import styles from '../../styles/dashboard.module.css';
 
 class Index extends Component {
 	componentDidMount() {
@@ -25,9 +24,8 @@ class Index extends Component {
 	render() {
 		return (
 			<div>
-				<ResponsiveDrawer />
 				<SvgMap />
-				<div className={styles.content}>{this.props.children}</div>
+				<ResponsiveDrawer component={this.props.children} />
 			</div>
 		);
 	}
