@@ -127,6 +127,13 @@
 
   opacity: 0.1;
 }
+.wrap1{
+  width: 60%;
+  height: auto;
+  margin-top: 15vh;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .side_items {
   text-transform: none;
@@ -190,7 +197,7 @@
     width: auto;
   }
 
-  .wrap {
+  .wrap,wrap1 {
     width: 80%;
     height: auto;
     margin-top: 5vh;

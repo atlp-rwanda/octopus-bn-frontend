@@ -16,7 +16,7 @@ import Requests from "../views/Dashboard/Requests";
 import Profile from "../components/Profile";
 import ProfileSettings from "../components/ProfileSettings";
 import UserRoles from "../views/Dashboard/UserRoles";
-
+import addAccommodation from "../views/Dashboard/addAccommodationPage";
 export default class index extends Component {
   render() {
     return (
@@ -38,6 +38,11 @@ export default class index extends Component {
                   component={ProfileSettings}
                 />
                 <Route path="/user-roles" exact component={UserRoles} />
+                <Route
+                  path="/add-accommodation"
+                  exact
+                  component={addAccommodation}
+                />
               </div>
             )}
           />

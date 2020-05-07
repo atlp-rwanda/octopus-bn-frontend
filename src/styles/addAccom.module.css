@@ -1,0 +1,52 @@
+.forms_plus {
+  margin-left: 20px;
+  width: 1500px;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.topIntro {
+  float: left;
+  width: 100%;
+  margin-bottom: 0vh;
+}
+.title {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 48px;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+}
+.sub_title {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: #a6acbe;
+}
+.button {
+  margin-top: 15px;
+}
+
+.wrap {
+width: 100%
+}
+
+@media screen and (max-width: 500px) {
+  .forms_plus {
+    margin-left: auto;
+    margin-top: auto;
+    width: auto;
+  }
+}

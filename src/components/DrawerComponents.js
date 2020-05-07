@@ -13,6 +13,7 @@ import { FaUserCog } from "react-icons/fa";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import PersonIcon from "@material-ui/icons/Person";
 import { withRouter, Redirect } from "react-router-dom";
+import AddToPhotosIcon from "@material-ui/icons/AddToPhotos";
 
 const drawerWidth = 240;
 
@@ -119,6 +120,12 @@ const DrawerComponents = ({ history, ...props }) => {
       text: "My Profile",
       to: "/profile-settings",
       icon: <PersonIcon />,
+    },
+    {
+      key: "add-accommodation",
+      text: "Add accommodation",
+      to: "/add-accommodation",
+      icon: <AddToPhotosIcon />,
     },
   ];
 
