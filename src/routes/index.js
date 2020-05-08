@@ -11,6 +11,9 @@ import Lost from '../views/Lost.View';
 import DashboardRoot from '../views/Dashboard';
 import DashboardHome from '../views/Dashboard/Home';
 import Requests from '../views/Dashboard/Requests';
+import Profile from '../components/Profile';
+import ProfileSettings from '../components/ProfileSettings';
+
 export default class index extends Component {
 	render() {
 		return (
@@ -19,12 +22,14 @@ export default class index extends Component {
 				<Route path="/signup" exact component={Signup} />
 				<Route path="/verify-email" exact component={Confirm} />
 				<Route path="/social-login" exact component={SocialLogin} />
+				<Route path="/profile" exact component={Profile} />
 				<DashboardRoot>
 					<Route
 						component={({ match }) => (
 							<div>
 								<Route path="/dashboard" exact component={DashboardHome} />
 								<Route path="/requests" exact component={Requests} />
+								<Route path="/profile-settings" exact component={ProfileSettings} />
 							</div>
 						)}
 					/>

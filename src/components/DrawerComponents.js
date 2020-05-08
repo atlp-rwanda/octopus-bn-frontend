@@ -11,6 +11,7 @@ import { makeStyles, useTheme, fade } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import PersonIcon from '@material-ui/icons/Person';
 import { withRouter, Redirect } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -96,7 +97,8 @@ const useStyles = makeStyles((theme) => ({
 const DrawerComponents = ({ history, ...props }) => {
 	const routes = [
 		{ key: 'Dashboard', text: 'Dashboard', to: '/dashboard', icon: <HomeIcon /> },
-		{ key: 'Requests', text: 'My Requests', to: '/requests', icon: <FlightTakeoffIcon /> }
+		{ key: 'Requests', text: 'My Requests', to: '/requests', icon: <FlightTakeoffIcon /> },
+		{ key: 'Profile', text: 'My Profile', to: '/profile-settings', icon: <PersonIcon /> }
 	];
 	const classes = useStyles();
 	const logout = () => {

@@ -1,0 +1,75 @@
+
+.LeftForm {
+    width: 80%;
+    height: 100vh;
+    display: inline-block;
+  }
+  .Wrap {
+    width: 65%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+  .FormTopText {
+    text-align: center;
+    margin-bottom: .1vh;
+  }
+  .ActionTitle{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  .ActionSubtitle{
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+  }
+  .Form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5rem;
+    margin-top: 4rem;
+  }
+  .Input {
+    width: 100%;
+  }
+  .Center{
+    text-align: center;
+    font-size: 20px;
+    color: green;
+  }
+  .ProfilePicture{
+    width: 80px;
+    height: 80px;
+    border-radius: 3rem;
+  }
+  .ProfileHolder{
+    max-width: 1140px;
+    margin-bottom: 30px;
+  }
+  .ProfileLeft{
+    float: left;
+  }
+  .ProfileRight{
+    margin-left: 100px;
+  }
+  .ProfileHolder::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media screen and (max-width: 500px) {
+    .LeftForm{
+        float: left;
+        width: 100%;
+      }
+      .Wrap {
+        width: 80%;
+        height: auto;
+        margin-top: 5vh;
+        margin-right: auto;
+        margin-left: auto;
+      }}
+
