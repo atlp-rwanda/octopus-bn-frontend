@@ -61,5 +61,18 @@
   "acco_supplier": "Fournisseur d'hébergement",
   "travel_admin": "Administrateur de voyage",
   "travel_tmember": "Membre de l'équipe de voyage",
-  "select-role": "Vous devez sélectionner un rôle"
+  "select-role": "Vous devez sélectionner un rôle",
+
+  "password-gone": "Réinitialisez votre mot de passe",
+  "link-promise": "Nous vous enverrons un lien de réinitialisation de mot de passe.",
+  "email": "E-mail",
+  "send": "Envoyer",
+  "network-error": "Oops! Erreur réseau.",
+  "valid-mail": "Nécessite un e-mail valide",
+  "user-exists-not": "L'email fourni n'existe pas, créez un compte",
+  "process-message": "Veuillez vérifier un e-mail que nous vous avons envoyé pour terminer le processus.",
+  
+  "reset-password": "Terminez Le Processus de Réinitialisation du Mot de Passe",
+  "new-password": "Terminez Le Processus",
+  "confirm-password": "Confirmez le Mot de Passe"
 }

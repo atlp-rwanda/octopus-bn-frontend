@@ -23,8 +23,13 @@ class SignupPage extends React.Component {
 SignupPage.propTypes = {
   history: Proptypes.shape({
     push: Proptypes.func.isRequired,
-  }).isRequired,
+  }),
   signup: Proptypes.func.isRequired,
 };
 
+SignupPage.defaultProps = {
+  history: {
+    push: ()=> undefined
+  }
+}
 export default connect(null, { signup })(SignupPage);

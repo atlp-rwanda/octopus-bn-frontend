@@ -623,7 +623,7 @@ exports[`User role setting should render the user role view 1`] = `
         </div>
       </div>
       <div
-        aria-label="french-button"
+        data-testid="french-button"
       >
         <div
           class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"

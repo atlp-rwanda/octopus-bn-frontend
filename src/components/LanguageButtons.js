@@ -40,7 +40,8 @@ class LanguageButtons extends Component {
 				<div
 					className={styles.langue_button}
 					onClick={() => this.buttonClickHandler('fr')}
-					aria-label="french-button"
+					data-testid="french-button"	
+					
 				>
 					<Chip
 						label="Français"

@@ -16,6 +16,9 @@ import Requests from "../views/Dashboard/Requests";
 import Profile from "../components/Profile";
 import ProfileSettings from "../components/ProfileSettings";
 import UserRoles from "../views/Dashboard/UserRoles";
+import { SendResetEmailView, PasswordResetProcess } from '../views/SendMailView';
+import {ResetPasswordView} from '../views/ResetPasswordView'
+
 
 export default class index extends Component {
   render() {
@@ -26,6 +29,9 @@ export default class index extends Component {
         <Route path="/verify-email" exact component={Confirm} />
         <Route path="/social-login" exact component={SocialLogin} />
         <Route path="/profile" exact component={Profile} />
+        <Route path="/forgot-password" exact component={SendResetEmailView}/>
+        <Route path="/password-reset-process" exact component={PasswordResetProcess}/>
+        <Route path="/reset-password" exact component={ResetPasswordView}/>
         <DashboardRoot>
           <Route
             component={({ match }) => (

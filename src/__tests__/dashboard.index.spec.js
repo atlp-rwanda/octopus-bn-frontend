@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from '../redux/store';
 import userEvent from '@testing-library/user-event';
 import IntlProvider from '../languages/components/IntlProvider';
+import {encode} from '../utils/jwtTokenizer'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const LostComponent = () => {
@@ -19,6 +20,8 @@ const LostComponent = () => {
 	);
 };
 
+const token = encode({ email:'octopusbn@gmail.com'})
+
 describe('LOST', () => {
 	afterEach(cleanup);
 	it('should render ResponsiveDrawer component', () => {
@@ -29,7 +32,8 @@ describe('LOST', () => {
 	it('should render ResponsiveDrawer with local storage', () => {
 		localStorage.setItem(
 			'bn-token',
-			'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9jdG9wdXNibkBnbWFpbC5jb20iLCJwcmVmZXJlZExhbmciOiJlbiIsImlhdCI6MTU4ODcyNzI1MiwiZXhwIjoxNTg5MzMyMDUyfQ.j_t2TtXSh_Wp_x3Nba4K8CPPEYFseJ9J5ScDPuIF8cA'
+			token
+			// 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9jdG9wdXNibkBnbWFpbC5jb20iLCJwcmVmZXJlZExhbmciOiJlbiIsImlhdCI6MTU4ODcyNzI1MiwiZXhwIjoxNTg5MzMyMDUyfQ.j_t2TtXSh_Wp_x3Nba4K8CPPEYFseJ9J5ScDPuIF8cA'
 		);
 		localStorage.setItem(
 			'bn-user-data',

@@ -137,22 +137,37 @@ describe("LOGIN", () => {
     userEvent.type(password, "password");
     form.dispatchEvent(new Event("submit"));
   });
-  it("should change the language to french", async () => {
+
+  it("should change the language to french",  () => {
     const {
-      getByLabelText,
       getByText,
-      getByTestId,
-      container,
-      debug,
-    } = LoginComponent();
-    const french = getByLabelText("french-button");
+      getByTestId
+    } = SendResetEmailComponent();
+    const french = getByTestId("french-button").querySelector('div');
     fireEvent.click(french);
     waitFor(() =>
       expect(
-        getByText(
-          "Rendre le voyage et l'hébergement de l'entreprise faciles et pratiques."
-        )
-      ).toBeTruthy()
+        getByText("Rendre le voyage et l'hébergement de l'entreprise faciles et pratiques.")).toBeInTheDocument()
     );
   });
+
+
+  // it("should change the language to french", async () => {
+  //   const {
+  //     getByLabelText,
+  //     getAllByText,
+  //     getByTestId,
+  //     container,
+  //     debug,
+  //   } = LoginComponent();
+  //   const french = getAllByText("french-button");
+  //   fireEvent.click(french);
+  //   waitFor(() =>
+  //     expect(
+  //       getByText(
+  //         "Rendre le voyage et l'hébergement de l'entreprise faciles et pratiques."
+  //       )
+  //     ).toBeTruthy()
+  //   );
+  // });
 });

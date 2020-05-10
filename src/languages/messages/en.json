@@ -61,5 +61,18 @@
   "acco_supplier": "Accommodation supplier",
   "travel_admin": "Travel admin",
   "travel_tmember": "Travel team member",
-  "select-role": "You must select a role"
+  "select-role": "You must select a role",
+  
+  "password-gone": "Reset Your Password",
+  "link-promise": "We will send you a password reset link.",
+  "send": "Send",
+  "email": "Email",
+  "networ-error": "Oops! Network Error.",
+  "valid-mail": "Requires valid email",
+  "user-exists-not": "The provided email don't exist, create an account",
+  "process-message": "Please check an email we've sent you to complete the process.",
+
+  "reset-password": "Complete The Process",
+  "new-password": "New Password",
+  "confirm-password": "Confirm Password"
 }

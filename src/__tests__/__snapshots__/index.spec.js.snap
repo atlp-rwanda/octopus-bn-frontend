@@ -242,7 +242,7 @@ exports[`SIGN UP renders the component 1`] = `
             </div>
           </div>
           <div
-            aria-label="french-button"
+            data-testid="french-button"
           >
             <div
               class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -388,7 +388,7 @@ exports[`SIGN UP renders the component 1`] = `
               </div>
             </div>
             <a
-              href="/forget"
+              href="/forgot-password"
             >
               Forgot password?
             </a>
@@ -682,7 +682,7 @@ exports[`SIGN UP renders the confirm page 1`] = `
           </div>
         </div>
         <div
-          aria-label="french-button"
+          data-testid="french-button"
         >
           <div
             class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -961,7 +961,7 @@ exports[`SIGN UP renders the sign up page 1`] = `
             </div>
           </div>
           <div
-            aria-label="french-button"
+            data-testid="french-button"
           >
             <div
               class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -1480,7 +1480,7 @@ exports[`SIGN UP renders the signup form 1`] = `
           </div>
         </div>
         <div
-          aria-label="french-button"
+          data-testid="french-button"
         >
           <div
             class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
