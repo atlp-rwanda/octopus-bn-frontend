@@ -106,12 +106,6 @@ h1 {
 
 }
 
-.fs_confirm{
-    margin-top: 360px;
-    color: #000;
-    font-size: 20px;
-}
-
 @media screen and (max-width: 500px) {
 
     .side {
@@ -151,11 +145,5 @@ h1 {
     }
     .link {
         margin-top: 10px;
-    }
-
-    .fs_confirm{
-        margin-top: 360px;
-        color: #000;
-        font-size: 20px;
     }
 }
