@@ -19,6 +19,6 @@ export const encode = (claims) => {
    * @returns {object} payload
    */
 export const decode = (token) => {
-	const payload = jwt.verify(token, 'example');
+	const payload = jwt.decode(token, 'example');
 	return payload;
 };

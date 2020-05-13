@@ -1,3 +1,6 @@
+body{
+  overflow: scroll !important;
+}
 .content {
   flex-grow: 1;
   width: calc(100% - 240px);
@@ -5,6 +8,57 @@
   padding: 20px;
   margin-top: 63px;
   float: right;
+}
+.CardContainer{
+  margin-left: 61px;
+  display: inline-block;
+  position: relative;
+}
+.PaginationContainer{
+  color: #000000;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 20px;
+}
+.RatingNumber{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #000000;
+}
+.headingAccom{
+  color: #3F3D56;
+  letter-spacing: 0.01em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 30px;
+  margin-bottom: 30px;
+  margin-left: 61px;
+}
+.headingTitle{
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: 0.01em;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.Address{
+  float: left;
+}
+.moreLink:link,
+.moreLink:visited{
+  text-decoration: none;
+  font-size: 20px;
+  color: #A6BB26;
+}
+.moreLink:hover{
+  cursor: pointer;
+  color: #42A6F5;
 }
 
 @media screen and (max-width: 500px) {

@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { LOGIN_USER_REQUEST, LOGIN_USER_SUCCESS, LOGIN_USER_FAILURE, CLOSE_MESSAGE } from '../types/loginTypes';
+import {setLocale} from '../actions/languageAction';
+
 export const loginAction = (data, history) => async (dispatch) => {
 	try {
 		dispatch(loginUserRequest());
@@ -8,6 +10,7 @@ export const loginAction = (data, history) => async (dispatch) => {
 		localStorage.setItem('bn-token', user.token);
 		localStorage.setItem('bn-user-data', JSON.stringify(user.data));
 		dispatch(loginUserSuccess({ data: user.data, token: user.token }));
+		dispatch(setLocale(user.data.preferedLang));
 		history.push('/dashboard');
 	} catch (err) {
 		if (err.response) {

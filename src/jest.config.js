@@ -12,7 +12,7 @@ module.export = {
   ],
   setupFilesAfterEnv: [
     "@testing-library/jest-dom/extend-expect",
-    "@testing-library/react/cleanup-after-each",
+    "@testing-library/react/cleanup-after-each"
   ],
   collectCoverage: true,
   testEnvironment: "node",
@@ -22,3 +22,4 @@ module.export = {
   ],
   coverageReporters: ["lcov"],
 };
+

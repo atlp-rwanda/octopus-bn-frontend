@@ -1,3 +1,5 @@
+import {encode} from '../jwtTokenizer';
+
 export const profileMockData = {
     payload:{
        firstName: 'OCTOPUSBN',
@@ -56,5 +58,17 @@ export const profileMockData = {
           "Gender is invalid"
        ]}
       },
-     token : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9jdG9wdXNibkBnbWFpbC5jb20iLCJwcmVmZXJlZExhbmciOiJlbiIsImlhdCI6MTU4ODEwOTc2OCwiZXhwIjoxNTg4NzE0NTY4fQ.TQ-GjWcpckCIexuN3zldaT3-8ernA8lHDOYBlzyBfOo'
+     token : encode({
+      firstName: 'OCTOPUSBN',
+      lastName: 'Octopus',
+      gender: 'other',
+      birthDate: '01-01-1995',
+      preferedLang: 'en',
+      preferedCurrency: 'US',
+      residence: 'Kigali',
+      department: 'IT',
+      imageUrl: 'https://www.google.com/profile.gif',
+      bio: 'I like to travel a round the globe',
+      passportNumber:"RK0884756"
+    })
 }
