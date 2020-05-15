@@ -25,6 +25,13 @@ h1 {
     margin-right: auto;
     margin-left: auto;
 }
+.wrapReset {
+    width: 45%;
+    height: auto;
+    margin-top: 20vh;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .inputs {
     width: 100%;

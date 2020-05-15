@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "start": "serve -s ./build",
     "test": "jest --silent -c",
-    "test:watch": "jest --silent --watch",
+    "test:watch": "jest --silent  --watch",
     "storybook": "start-storybook",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "heroku-postbuild": "webpack -p"
