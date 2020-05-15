@@ -29,7 +29,7 @@ describe('LOST', () => {
 	it('should render ResponsiveDrawer with local storage', () => {
 		localStorage.setItem(
 			'bn-token',
-			'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9jdG9wdXNibkBnbWFpbC5jb20iLCJwcmVmZXJlZExhbmciOiJlbiIsImlhdCI6MTU4ODcyNzI1MiwiZXhwIjoxNTg5MzMyMDUyfQ.j_t2TtXSh_Wp_x3Nba4K8CPPEYFseJ9J5ScDPuIF8cA'
+			'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9jdG9wdXNibkBnbWFpbC5jb20iLCJwcmVmZXJlZExhbmciOiJlbiIsImlhdCI6MTU4OTM2NjE4OCwiZXhwIjoxNTg5OTcwOTg4fQ.uaG415eGNK5h0l_ShnK0phYfk7dGlm7pIT3Tc5ydZ1E'
 		);
 		localStorage.setItem(
 			'bn-user-data',

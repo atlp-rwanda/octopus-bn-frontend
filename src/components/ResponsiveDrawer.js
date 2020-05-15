@@ -7,7 +7,6 @@ import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import { deepOrange, deepPurple } from '@material-ui/core/colors';
-
 import Toolbar from '@material-ui/core/Toolbar';
 
 import { makeStyles, useTheme, fade } from '@material-ui/core/styles';
@@ -57,7 +56,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 	content: {
 		flexGrow: 1,
-		padding: theme.spacing(3)
+		marginTop: theme.spacing(8),
+		padding: theme.spacing(3),
+		height: `calc(${window.innerHeight}px - 65px)`,
+		overflowX: 'scroll',
+	
 	},
 	search: {
 		position: 'relative',
@@ -106,9 +109,9 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#4ba7f2'
 	}
 }));
-
-function ResponsiveDrawer(props) {
+const ResponsiveDrawer = (props) => {
 	const { window } = props;
+
 	const classes = useStyles();
 	const theme = useTheme();
 	const [ mobileOpen, setMobileOpen ] = React.useState(false);
@@ -167,7 +170,6 @@ function ResponsiveDrawer(props) {
 							// onClick={handleProfileMenuOpen}
 							color="inherit"
 						>
-							
 							<Avatar alt={firstName} src="/static/images/avatar/1.jpg" className={classes.orange} />
 						</IconButton>
 					</div>
@@ -204,6 +206,9 @@ function ResponsiveDrawer(props) {
 					</Drawer>
 				</Hidden>
 			</nav>
+			<main className={classes.content}>
+				<div className={classes.toolbar}>{props.component}</div>
+			</main>
 		</div>
 	);
 }

@@ -1,11 +1,441 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LOST should render ResponsiveDrawer component 1`] = `
+exports[`LOST should render requestsComponent component 1`] = `
 <DocumentFragment>
   <div>
-    <h1>
-      Requests
-    </h1>
+    <div>
+      <div>
+        <p>
+          Dashboard - My REQUESTS
+        </p>
+        <p>
+          Travel made easy - Barefoot Nomad
+        </p>
+      </div>
+      <div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <span
+              class="MuiButton-startIcon MuiButton-iconSizeMedium"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M2.5 19h19v2h-19v-2zm19.57-9.36c-.21-.8-1.04-1.28-1.84-1.06L14.92 10l-6.9-6.43-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 2.59 4.49s7.12-1.9 16.57-4.43c.81-.23 1.28-1.05 1.07-1.85z"
+                />
+              </svg>
+            </span>
+            Request Travel
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiPaper-root makeStyles-root-42 MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h6"
+            id="tableTitle"
+          >
+            My requests
+          </div>
+        </div>
+        <table
+          aria-label="caption table"
+          class="MuiTable-root makeStyles-table-43"
+        >
+          <thead
+            class="MuiTableHead-root"
+          >
+            <tr
+              class="MuiTableRow-root MuiTableRow-head"
+            >
+              <th
+                class="MuiTableCell-root MuiTableCell-head"
+                scope="col"
+              >
+                Type
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+                scope="col"
+              >
+                From
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+                scope="col"
+              >
+                To
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+                scope="col"
+              >
+                Departure Date
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+                scope="col"
+              >
+                Return Date
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+                scope="col"
+              >
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="MuiTableBody-root"
+          >
+            <tr
+              class="MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+                colspan="6"
+              >
+                <div
+                  class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                  role="progressbar"
+                  style="width: 24px; height: 24px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleDisableShrink MuiCircularProgress-circleIndeterminate"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20"
+                      stroke-width="4"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div
+          class="MuiTablePagination-root"
+        >
+          <div
+            class="MuiToolbar-root MuiToolbar-regular MuiTablePagination-toolbar MuiToolbar-gutters"
+          >
+            <div
+              class="MuiTablePagination-spacer"
+            />
+            <p
+              class="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+            >
+              Rows per page:
+            </p>
+            <div
+              class="MuiInputBase-root MuiTablePagination-input MuiTablePagination-selectRoot"
+            >
+              <div
+                aria-haspopup="listbox"
+                aria-label="Rows per page:"
+                class="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
+                role="button"
+                tabindex="0"
+              >
+                5
+              </div>
+              <input
+                type="hidden"
+                value="5"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+            <p
+              class="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+            >
+              0-0 of 0
+            </p>
+            <div
+              class="MuiTablePagination-actions"
+            >
+              <button
+                aria-label="Previous page"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                title="Previous page"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                aria-label="Next page"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                title="Next page"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LOST should render requestsComponent component 2`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root makeStyles-root-204 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <div
+        class="MuiTypography-root MuiTypography-h6"
+        id="tableTitle"
+      >
+        My requests
+      </div>
+    </div>
+    <table
+      aria-label="caption table"
+      class="MuiTable-root makeStyles-table-205"
+    >
+      <thead
+        class="MuiTableHead-root"
+      >
+        <tr
+          class="MuiTableRow-root MuiTableRow-head"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-head"
+            scope="col"
+          >
+            Type
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+            scope="col"
+          >
+            From
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+            scope="col"
+          >
+            To
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+            scope="col"
+          >
+            Departure Date
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+            scope="col"
+          >
+            Return Date
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter"
+            scope="col"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter"
+            colspan="6"
+          >
+            <div
+              class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+              role="progressbar"
+              style="width: 24px; height: 24px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleDisableShrink MuiCircularProgress-circleIndeterminate"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20"
+                  stroke-width="4"
+                />
+              </svg>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div
+      class="MuiTablePagination-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular MuiTablePagination-toolbar MuiToolbar-gutters"
+      >
+        <div
+          class="MuiTablePagination-spacer"
+        />
+        <p
+          class="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+        >
+          Rows per page:
+        </p>
+        <div
+          class="MuiInputBase-root MuiTablePagination-input MuiTablePagination-selectRoot"
+        >
+          <div
+            aria-haspopup="listbox"
+            aria-label="Rows per page:"
+            class="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
+            role="button"
+            tabindex="0"
+          >
+            5
+          </div>
+          <input
+            type="hidden"
+            value="5"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+        <p
+          class="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+        >
+          0-0 of 0
+        </p>
+        <div
+          class="MuiTablePagination-actions"
+        >
+          <button
+            aria-label="Previous page"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit Mui-disabled Mui-disabled"
+            disabled=""
+            tabindex="-1"
+            title="Previous page"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </span>
+          </button>
+          <button
+            aria-label="Next page"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit Mui-disabled Mui-disabled"
+            disabled=""
+            tabindex="-1"
+            title="Next page"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
