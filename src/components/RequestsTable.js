@@ -214,13 +214,13 @@ const RequestsTable = () => {
 						))
 					) : requests.loading == 'block' ? (
 						<TableRow>
-							<TableCell colspan="6" align="center">
+							<TableCell colSpan="6" align="center">
 								<CircularProgress variant="indeterminate" disableShrink size={24} thickness={4} />
 							</TableCell>
 						</TableRow>
 					) : (
 						<TableRow>
-							<TableCell colspan="6" align="center">
+							<TableCell colSpan="6" align="center">
 								You have no Requests
 							</TableCell>
 						</TableRow>

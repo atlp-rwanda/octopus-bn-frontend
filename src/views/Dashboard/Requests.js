@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+import { Button} from '@material-ui/core';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import styles from '../../styles/dashboard.requests.module.css';
 import RequestsTable from '../../components/RequestsTable';
 import { connect } from 'react-redux';
 import { getRequestsAction } from '../../redux/actions/requestsAction';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class Requests extends Component {
 	async componentDidMount() {
@@ -20,14 +20,18 @@ class Requests extends Component {
 						<p className={styles.sub_title}>Travel made easy - Barefoot Nomad</p>
 					</div>
 					<div className={styles.right}>
-						<Button
-							variant="contained"
-							className={styles.button}
-							color="primary"
-							startIcon={<FlightTakeoffIcon />}
-						>
-							Request Travel
+						<span>
+							<Button
+								variant="contained"
+								className={styles.button}
+								color="primary"
+								startIcon={<FlightTakeoffIcon />}
+								component={Link}
+								to={'/new-trip-request'}
+							>
+								New Trip Request
 						</Button>
+						</span>
 					</div>
 				</div>
 				<div className={styles.table}>

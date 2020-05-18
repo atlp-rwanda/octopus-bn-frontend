@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
+
 
 module.exports = {
 	mode: 'development',
@@ -78,6 +80,9 @@ module.exports = {
 			systemvars: true,
 			silent: true,
 			defaults: false
+		}),
+		new MomentLocalesPlugin({
+			localesToKeep: ['es-us', 'ru', 'fr']
 		})
 	],
 	node: {

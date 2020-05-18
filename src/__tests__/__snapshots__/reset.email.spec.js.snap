@@ -273,7 +273,7 @@ exports[`RESET should render reset password component 1`] = `
               Get Reset Email
             </p>
             <p>
-              Please fill the form
+              Please fill the form.
             </p>
           </div>
           <form

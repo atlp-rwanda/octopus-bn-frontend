@@ -10,6 +10,9 @@ import accommodationReducer from '../reducers/accommodationReducer';
 import AvailRequestsReducer from './AvailRequestsReducer';
 import addRoomReducer from "./addRoomReducer";
 import likeOrUnlikeReducer from './likeOrUnlikeReducer';
+import multiCityReducer from './multicityRequestReducer'
+import nonMultiCityReducer from './nonMultiCityReducer'
+
 
 
 const allReducers = combineReducers({
@@ -23,6 +26,9 @@ const allReducers = combineReducers({
 	accommodation: accommodationReducer,
 	addRoom: addRoomReducer,
 	availRequests: AvailRequestsReducer,
-	likeOrUnLike: likeOrUnlikeReducer
+	likeOrUnLike: likeOrUnlikeReducer,
+	// multiCityTrip: multiCityReducer,
+	nonMultiCityTrip: nonMultiCityReducer,
+
 });
 export default allReducers;
