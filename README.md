@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Stackup-Rwanda/octopus-bn-frontend.svg?branch=develop)](https://travis-ci.org/Stackup-Rwanda/octopus-bn-frontend)
 [![Coverage Status](https://coveralls.io/repos/github/Stackup-Rwanda/octopus-bn-frontend/badge.svg?branch=develop)](https://coveralls.io/github/Stackup-Rwanda/octopus-bn-frontend?branch=develop)
-[![Maintainability](https://api.codeclimate.com/v1/badges/fab681eda7169547accf/maintainability)](https://codeclimate.com/github/Stackup-Rwanda/octopus-bn-frontend/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/904b7e5abee79dba2895/maintainability)](https://codeclimate.com/github/Stackup-Rwanda/octopus-bn-frontend/maintainability)
 
 # Description ✍︎
 
