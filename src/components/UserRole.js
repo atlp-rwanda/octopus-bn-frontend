@@ -11,6 +11,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Button from "@material-ui/core/Button";
 import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
 import styles from "../styles/signup.module.css";
 
 import translate from "../languages/translate";
@@ -192,4 +193,4 @@ UserRole.propTypes = {
   submit: PropTypes.func.isRequired,
 };
 
-export default UserRole;
+export default withRouter(UserRole);

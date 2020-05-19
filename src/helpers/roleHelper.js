@@ -20,5 +20,21 @@ export default {
           header
         )
         .then((res) => res.data.user),
+    addAccommodation: (data) =>
+      axios
+        .post(
+          "https://octopus-bn-backend.herokuapp.com/api/v1/accommodations",
+          {
+            name: data.name,
+            city: data.city,
+            country: data.country,
+            city: data.city,
+            imageUrl: data.imageUrl,
+            amenities: data.amenities,
+            around: data.around,
+          },
+          header
+        )
+        .then((res) => res.data.accommodation),
   },
 };
