@@ -116,7 +116,7 @@ class LoginForm extends Component {
                 value={this.state.email}
                 onChange={(e) => this.change(e)}
               />
-              <Link to="/forget" className={styles.link}>
+              <Link to="/password-reset-email" className={styles.link}>
                 {translate("forget-password")}
               </Link>
               <TextField

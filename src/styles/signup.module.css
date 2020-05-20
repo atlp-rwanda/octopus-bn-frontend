@@ -69,6 +69,11 @@
   margin-bottom: 30px;
   float: left;
 }
+.linkLabel {
+  color: #2196f3;
+  text-decoration: none;
+}
+
 
 .fs_title {
   font-size: 28px;

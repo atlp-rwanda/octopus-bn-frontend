@@ -388,7 +388,7 @@ exports[`SIGN UP renders the component 1`] = `
               </div>
             </div>
             <a
-              href="/forget"
+              href="/password-reset-email"
             >
               Forgot password?
             </a>

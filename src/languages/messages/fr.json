@@ -61,5 +61,10 @@
   "acco_supplier": "Fournisseur d'hébergement",
   "travel_admin": "Administrateur de voyage",
   "travel_tmember": "Membre de l'équipe de voyage",
-  "select-role": "Vous devez sélectionner un rôle"
+  "select-role": "Vous devez sélectionner un rôle",
+  "confirm_password": "Confirmez le mot de passe",
+  "password_reset": "Your password was reset successfully",
+  "sign-in-click": "Votre mot de passe a été réinitialisé avec succès",
+  "password_reset_email": "Nous vous avons envoyé par e - mail des instructions pour définir un nouveau mot de passe si un compte existe avec l 'e-mail que vous avez entré. Vous devriez les recevoir sous peu.",
+  "reset-email": "obtenir un e-mail de réinitialisation"
 }

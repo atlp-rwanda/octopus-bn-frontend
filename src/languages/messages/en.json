@@ -7,7 +7,6 @@
   "or": "Or",
   "password": "Password",
   "lost": "Lost? let's Take you",
-
   "update-profile": "Update Profile",
   "hi": "Hi",
   "welcome": "welcome to update profile",
@@ -38,7 +37,6 @@
   "YourEmail": "Email",
   "ProfileSettings": "Profile Settings",
   "lineManger": "Manager",
-
   "sign-up": "Sign Up",
   "first-name": "First Name",
   "last-name": "Last Name",
@@ -48,7 +46,6 @@
   "valid-email": "Please enter a valid email",
   "valid-password": "Minimum lenght for password is 8 characters",
   "confirm-email": "An email has been sent to you, use it to verify your account and start enjoying Barefoot Nomad services.",
-
   "dashboard": "Dashboard",
   "my-requests": "My requests",
   "avail-requests": "Avail requests",
@@ -61,5 +58,10 @@
   "acco_supplier": "Accommodation supplier",
   "travel_admin": "Travel admin",
   "travel_tmember": "Travel team member",
-  "select-role": "You must select a role"
+  "select-role": "You must select a role",
+  "confirm_password": "Confirm Password",
+  "password_reset": "Your password was reset successfully",
+  "sign-in-click": "Please click to sign in",
+  "password_reset_email": "We’ve emailed you instructions for setting a new password if an account exists with the email you entered. You should receive them shortly.",
+  "reset-email": "Get Reset Email"
 }
