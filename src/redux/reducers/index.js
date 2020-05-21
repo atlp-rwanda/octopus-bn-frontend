@@ -7,7 +7,8 @@ import roleReducer from './roleReducer';
 import requestsReducer from './requestsReducer';
 import resetPasswordReducer from './resetPasswordReducer';
 import accommodationReducer from '../reducers/accommodationReducer';
-import addRoomReducer from "./addRoomReducer";
+import addRoomReducer from './addRoomReducer';
+import AvailRequestsReducer from './AvailRequestsReducer';
 
 const allReducers = combineReducers({
 	login: loginReducer,
@@ -16,8 +17,9 @@ const allReducers = combineReducers({
 	profile: profileReducer,
 	role: roleReducer,
 	resetPassword: resetPasswordReducer,
-    requests: requestsReducer,
-    accommodation: accommodationReducer,
-    addRoom: addRoomReducer
+	requests: requestsReducer,
+	accommodation: accommodationReducer,
+	addRoom: addRoomReducer,
+	availRequests: AvailRequestsReducer
 });
 export default allReducers;
