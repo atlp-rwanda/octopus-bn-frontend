@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DrawerComponents = ({ history, ...props }) => {
-  const routes = [
+  let routes = [
     {
       key: "Dashboard",
       text: "Dashboard",
@@ -110,31 +110,50 @@ const DrawerComponents = ({ history, ...props }) => {
       to: "/requests",
       icon: <FlightTakeoffIcon />,
     },
-    {
-      key: "user-roles",
-      text: "Set role",
-      to: "/user-roles",
-      icon: <FaUserCog style={{ width: "25px" }} />,
-    },
+
     {
       key: "Profile",
       text: "My Profile",
       to: "/profile-settings",
       icon: <PersonIcon />,
     },
-    {
-      key: "add-accommodation",
-      text: "Add accommodation",
-      to: "/add-accommodation",
-      icon: <AddToPhotosIcon />,
-    },
-    {
-      key: "add-rooms",
-      text: "Add rooms",
-      to: "/add-rooms",
-      icon: <PostAddIcon />,
-    },
   ];
+  const user = JSON.parse(localStorage.getItem("bn-user-data"));
+
+  if (user.role === "super_administrator") {
+    routes = [
+      ...routes,
+      {
+        key: "user-roles",
+        text: "Set role",
+        to: "/user-roles",
+        icon: <FaUserCog style={{ width: "25px" }} />,
+      },
+    ];
+  } else if (
+    user.role === "travel_administrator" ||
+    user.role === "accommodation_supplier"
+  ) {
+    routes = [
+      ...routes,
+      {
+        key: "add-accommodation",
+        text: "Add accommodation",
+        to: "/add-accommodation",
+        icon: <AddToPhotosIcon />,
+      },
+      {
+        key: "add-rooms",
+        text: "Add rooms",
+        to: "/add-rooms",
+        icon: <PostAddIcon />,
+      },
+    ];
+  } else if (user.role === "manager") {
+    routes = [...routes];
+  } else if (user.role === "requester") {
+    routes;
+  }
 
   const classes = useStyles();
   const logout = () => {
