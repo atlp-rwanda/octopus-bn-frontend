@@ -14,6 +14,7 @@ import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import PersonIcon from "@material-ui/icons/Person";
 import { withRouter, Redirect } from "react-router-dom";
 import AddToPhotosIcon from "@material-ui/icons/AddToPhotos";
+import PostAddIcon from "@material-ui/icons/PostAdd";
 
 const drawerWidth = 240;
 
@@ -126,6 +127,12 @@ const DrawerComponents = ({ history, ...props }) => {
       text: "Add accommodation",
       to: "/add-accommodation",
       icon: <AddToPhotosIcon />,
+    },
+    {
+      key: "add-rooms",
+      text: "Add rooms",
+      to: "/add-rooms",
+      icon: <PostAddIcon />,
     },
   ];
 

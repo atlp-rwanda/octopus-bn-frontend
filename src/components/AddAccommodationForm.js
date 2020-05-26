@@ -100,7 +100,7 @@ class addAccommodationForm extends Component {
     const { errors, loading, open } = this.state;
     const cities2 = cities.getCities(countryList.getName(this.state.country));
     return (
-      <div className={styles.wrap1}>
+      <div className={styles.first_wrap}>
         <form
           onSubmit={this.onSubmit}
           style={{ flexGrow: 1 }}

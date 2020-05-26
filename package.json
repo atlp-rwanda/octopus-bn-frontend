@@ -119,6 +119,7 @@
       "!src/assets/*",
       "!src/**/ProfileSettings.js",
       "!src/redux/actions/profileActions.js",
+      "!src/redux/actions/*",
       "!src/stories/*",
       "!src/components/AddAccommodationForm.js",
       "!src/views/Dashboard/addAccommodationPage.js",

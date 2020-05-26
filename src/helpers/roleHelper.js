@@ -1,12 +1,5 @@
 import axios from "axios";
 
-const token = localStorage.getItem("bn-token");
-const header = {
-  headers: {
-    "Content-Type": "application/json",
-    "x-access-token": `${token}`,
-  },
-};
 export default {
   admin: {
     roleSettings: (data) =>
@@ -17,7 +10,12 @@ export default {
             email: data.email,
             role: data.role,
           },
-          header
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "x-access-token": `${localStorage.getItem("bn-token")}`,
+            },
+          }
         )
         .then((res) => res.data.user),
     addAccommodation: (data) =>
@@ -33,8 +31,32 @@ export default {
             amenities: data.amenities,
             around: data.around,
           },
-          header
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "x-access-token": `${localStorage.getItem("bn-token")}`,
+            },
+          }
         )
         .then((res) => res.data.accommodation),
+    addRooms: (data) =>
+      axios
+        .post(
+          "https://octopus-bn-backend.herokuapp.com/api/v1/accommodations/room",
+          {
+            accommodationsID: data.accommodationsID,
+            roomNumber: data.roomNumber,
+            cost: data.cost,
+            currency: data.currency,
+            type: data.type,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "x-access-token": `${localStorage.getItem("bn-token")}`,
+            },
+          }
+        )
+        .then((res) => res.data.room),
   },
 };
