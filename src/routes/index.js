@@ -21,6 +21,8 @@ import ResetPassword from "../views/ResetPassword";
 import Message from "../views/Message";
 import addAccommodation from "../views/Dashboard/addAccommodationPage";
 import addRooms from "../views/Dashboard/CreateRooms";
+import TravelAdminRoute from "./travelAdminRoutes";
+import SuperAdminRoute from "./superAdminRoutes";
 
 export default class index extends Component {
   render() {
@@ -49,13 +51,21 @@ export default class index extends Component {
                   exact
                   component={ProfileSettings}
                 />
-                <Route path="/user-roles" exact component={UserRoles} />
-                <Route
+                <SuperAdminRoute
+                  path="/user-roles"
+                  exact
+                  component={UserRoles}
+                />
+                <TravelAdminRoute
                   path="/add-accommodation"
                   exact
                   component={addAccommodation}
                 />
-                <Route path="/add-rooms" exact component={addRooms} />
+                <TravelAdminRoute
+                  path="/add-rooms"
+                  exact
+                  component={addRooms}
+                />
               </div>
             )}
           />

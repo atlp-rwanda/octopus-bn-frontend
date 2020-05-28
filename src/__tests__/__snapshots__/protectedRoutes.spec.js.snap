@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Protected routes renders the admin's component 1`] = `<DocumentFragment />`;
+
+exports[`Protected routes renders the super admin's component 1`] = `<DocumentFragment />`;
+
+exports[`Protected routes renders the travel admin's component 1`] = `<DocumentFragment />`;
