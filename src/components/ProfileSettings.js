@@ -22,6 +22,7 @@ import translate from '../languages/translate';
 import { Redirect } from 'react-router-dom';
 import Avatar from '../assests/bn-avatar.jpg';
 import ProfileAligner from '../views/Dashboard/ProfileAligner';
+import { setLocale } from '../redux/actions/languageAction';
 class ProfileSettings extends Component {
     constructor(props){
       super(props);
@@ -73,9 +74,9 @@ class ProfileSettings extends Component {
         this.setState({ errors });
          console.log(errors);
         if (Object.keys(errors).length === 0) {
-          console.log(this.state);
           this.setState({...this.state, open: true});
           this.props.updateProfile(this.state.user);
+          this.props.setLocale(this.state.user.preferedLang);
         }
       }
       showWidget = () => {
@@ -444,7 +445,9 @@ class ProfileSettings extends Component {
     }
     const mapDispatchToProps = dispatch => {
       return {
-        updateProfile : (payload) => dispatch(updateProfile(payload))
+        updateProfile : (payload) => dispatch(updateProfile(payload)),
+        setLocale : (locale) => dispatch(setLocale(locale)),
       }
     }
     export default connect(mapStateToProps, mapDispatchToProps) (ProfileSettings);
+    

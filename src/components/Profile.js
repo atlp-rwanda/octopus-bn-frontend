@@ -23,6 +23,7 @@ import translate from '../languages/translate';
 import LanguageButtons from './LanguageButtons';
 import { Redirect } from 'react-router-dom';
 import Avatar from '../assests/bn-avatar.jpg';
+import { setLocale } from '../redux/actions/languageAction';
 class Profile extends Component {
 constructor(props){
   super(props);
@@ -77,6 +78,7 @@ constructor(props){
       console.log(this.state);
       this.setState({...this.state, open: true});
       this.props.updateProfile(this.state.user);
+      this.props.setLocale(this.state.user.preferedLang);
     }
   }
   showWidget = () => {
@@ -462,7 +464,8 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    updateProfile : (payload) => dispatch(updateProfile(payload))
+    updateProfile : (payload) => dispatch(updateProfile(payload)),
+    setLocale : (locale) => dispatch(setLocale(locale))
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps) (Profile);

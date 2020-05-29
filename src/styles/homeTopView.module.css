@@ -1,0 +1,34 @@
+.button{
+    margin-top: 15px;
+}
+.right{
+    float: right;
+}
+.topIntro {
+    width: 100%;
+    margin-bottom: 5vh;
+    display: inline-block;
+}
+.left{
+    float: left;
+}
+.title{
+padding: 0;
+margin: 0;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 48px;
+letter-spacing: 0.01em;
+}
+
+.sub_title{
+padding: 0;
+margin: 0;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 14px;
+letter-spacing: 0.01em;
+color: #A6ACBE;
+}

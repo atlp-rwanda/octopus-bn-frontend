@@ -1,11 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LOST should render ResponsiveDrawer component 1`] = `
+exports[`Home component Should render home component properly 1`] = `
 <DocumentFragment>
   <div>
+    <div>
+      <div>
+        <p>
+          Dashboard - Home
+        </p>
+        <p>
+          Travel made easy - Barefoot Nomad
+        </p>
+      </div>
+      <div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <span
+              class="MuiButton-startIcon MuiButton-iconSizeMedium"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M2.5 19h19v2h-19v-2zm19.57-9.36c-.21-.8-1.04-1.28-1.84-1.06L14.92 10l-6.9-6.43-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 2.59 4.49s7.12-1.9 16.57-4.43c.81-.23 1.28-1.05 1.07-1.85z"
+                />
+              </svg>
+            </span>
+            Request Travel
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
     <h1>
-      Home
+      Accommodations
     </h1>
+    <div>
+      <div
+        class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+        role="progressbar"
+        style="width: 24px; height: 24px; display: inline-block; margin-left: 500px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleDisableShrink MuiCircularProgress-circleIndeterminate"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="20"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+    </div>
+    <div>
+      <div
+        class="makeStyles-pagination-4"
+      >
+        <nav
+          aria-label="pagination navigation"
+          class="MuiPagination-root"
+          data-testid="paginator"
+        >
+          <ul
+            class="MuiPagination-ul"
+          >
+            <li>
+              <button
+                aria-label="Go to previous page"
+                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiPaginationItem-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                aria-label="Go to next page"
+                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiPaginationItem-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
