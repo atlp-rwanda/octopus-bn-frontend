@@ -121,46 +121,50 @@ const DrawerComponents = ({ history, ...props }) => {
 	];
 	const user = JSON.parse(localStorage.getItem('bn-user-data'));
 
-	if (user.role === 'super_administrator') {
-		routes = [
-			...routes,
-			{
-				key: 'user-roles',
-				text: 'Set role',
-				to: '/user-roles',
-				icon: <FaUserCog style={{ width: '25px' }} />
-			}
-		];
-	} else if (user.role === 'travel_administrator' || user.role === 'accommodation_supplier') {
-		routes = [
-			...routes,
-			{
-				key: 'add-accommodation',
-				text: 'Add accommodation',
-				to: '/add-accommodation',
-				icon: <AddToPhotosIcon />
-			},
-			{
-				key: 'add-rooms',
-				text: 'Add rooms',
-				to: '/add-rooms',
-				icon: <PostAddIcon />
-			}
-		];
-	} else if (user.role === 'manager') {
-		routes = [
-			...routes,
-			{
-				key: 'avail-requests',
-				text: 'Avail Requests',
-				to: '/avail-requests',
-				icon: <FlightIcon />
-			}
-		];
-	} else if (user.role === 'requester') {
-		routes;
+	if (user) {
+		if (user.role === 'super_administrator') {
+			routes = [
+				...routes,
+				{
+					key: 'user-roles',
+					text: 'Set role',
+					to: '/user-roles',
+					icon: <FaUserCog style={{ width: '25px' }} />
+				}
+			];
+		} else if (user.role === 'travel_administrator' || user.role === 'accommodation_supplier') {
+			routes = [
+				...routes,
+				{
+					key: 'add-accommodation',
+					text: 'Add accommodation',
+					to: '/add-accommodation',
+					icon: <AddToPhotosIcon />
+				},
+				{
+					key: 'add-rooms',
+					text: 'Add rooms',
+					to: '/add-rooms',
+					icon: <PostAddIcon />
+				}
+			];
+		} else if (user.role === 'manager') {
+			routes = [
+				...routes,
+				{
+					key: 'avail-requests',
+					text: 'Avail Requests',
+					to: '/avail-requests',
+					icon: <FlightIcon />
+				}
+			];
+		} else if (user.role === 'requester') {
+			routes;
+		}
+	} else {
+		console.log('user sasasas');
+		history.push('/');
 	}
-
 	const classes = useStyles();
 	const logout = () => {
 		localStorage.removeItem('bn-user-data');

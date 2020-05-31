@@ -15,6 +15,13 @@ import { useSelector } from 'react-redux';
 import Chip from '@material-ui/core/Chip';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+import TextField from '@material-ui/core/TextField';
+import InputBase from '@material-ui/core/InputBase';
+import Divider from '@material-ui/core/Divider';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import DirectionsIcon from '@material-ui/icons/Directions';
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 		width: '100%',
@@ -23,6 +30,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	table: {
 		minWidth: 650
+	},
+	input: {
+		marginLeft: theme.spacing(1),
+		width: 650 / 2,
+		flex: 1
+	},
+	iconButton: {
+		padding: 10
 	},
 	pending: {
 		textTransform: 'uppercase',
@@ -51,66 +66,42 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: 'auto',
 		left: 0,
 		right: 0
+	},
+	search: {
+		position: 'absolute',
+		right: 0,
+		marginRight: theme.spacing(5)
 	}
 }));
 
-const TablePaginationActions = (props) => {
-	const classes = useStyles1();
-	const theme = useTheme();
-	const { count, page, rowsPerPage, onChangePage } = props;
-
-	const handleFirstPageButtonClick = (event) => {
-		onChangePage(event, 0);
-	};
-
-	const handleBackButtonClick = (event) => {
-		onChangePage(event, page - 1);
-	};
-
-	const handleNextButtonClick = (event) => {
-		onChangePage(event, page + 1);
-	};
-
-	const handleLastPageButtonClick = (event) => {
-		onChangePage(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
-	};
-
-	return (
-		<div className={classes.root}>
-			<IconButton onClick={handleFirstPageButtonClick} disabled={page === 0} aria-label="first page">
-				{theme.direction === 'rtl' ? <LastPageIcon /> : <FirstPageIcon />}
-			</IconButton>
-			<IconButton onClick={handleBackButtonClick} disabled={page === 0} aria-label="previous page">
-				{theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-			</IconButton>
-			<IconButton
-				onClick={handleNextButtonClick}
-				disabled={page >= Math.ceil(count / rowsPerPage) - 1}
-				aria-label="next page"
-			>
-				{theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-			</IconButton>
-			<IconButton
-				onClick={handleLastPageButtonClick}
-				disabled={page >= Math.ceil(count / rowsPerPage) - 1}
-				aria-label="last page"
-			>
-				{theme.direction === 'rtl' ? <FirstPageIcon /> : <LastPageIcon />}
-			</IconButton>
-		</div>
-	);
-};
-
-TablePaginationActions.propTypes = {
-	count: PropTypes.number.isRequired,
-	onChangePage: PropTypes.func.isRequired,
-	page: PropTypes.number.isRequired,
-	rowsPerPage: PropTypes.number.isRequired
-};
-
 const RequestsTable = () => {
+	const [ loading, setLoading ] = React.useState(false);
+	const [ search, setSearch ] = React.useState(false);
+	const [ results, setResults ] = React.useState({});
 	const requests = useSelector((state) => state.requests);
 	let rows = {};
+	const handleSearchChange = (event) => {
+		setSearchKey(event.target.value);
+		setSearch(true);
+
+		try {
+			var results = [];
+			const toSearch = trimString(searchKey); // trim it
+			for (var i = 0; i < rows.length; i++) {
+				for (var key in rows[i]) {
+					if (rows[i][key] != null) {
+						if (rows[i][key].indexOf(toSearch) != -1) {
+							if (!itemExists(results, rows[i])) results.push(rows[i]);
+						}
+					}
+				}
+			}
+			setResults(results);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+	console.log(loading);
 	try {
 		if (requests.loading == 'none') {
 			rows = requests.requests.data.data;
@@ -121,12 +112,31 @@ const RequestsTable = () => {
 
 	const classes = useStyles();
 	const [ page, setPage ] = React.useState(0);
+	const [ searchKey, setSearchKey ] = React.useState('');
 	const [ rowsPerPage, setRowsPerPage ] = React.useState(5);
-
-	const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
 	const handleChangePage = (event, newPage) => {
 		setPage(newPage);
+	};
+
+	const trimString = (s) => {
+		var l = 0,
+			r = s.length - 1;
+		while (l < s.length && s[l] == ' ') l++;
+		while (r > l && s[r] == ' ') r -= 1;
+		return s.substring(l, r + 1);
+	};
+
+	const compareObjects = (o1, o2) => {
+		var k = '';
+		for (k in o1) if (o1[k] != o2[k]) return false;
+		for (k in o2) if (o1[k] != o2[k]) return false;
+		return true;
+	};
+
+	const itemExists = (haystack, needle) => {
+		for (var i = 0; i < haystack.length; i++) if (compareObjects(haystack[i], needle)) return true;
+		return false;
 	};
 
 	const handleChangeRowsPerPage = (event) => {
@@ -136,10 +146,36 @@ const RequestsTable = () => {
 
 	return (
 		<Paper className={classes.root}>
-			<Toolbar>
+			{console.log(results)}
+			<Toolbar className={classes.Toolbar}>
 				<Typography className={classes.title} variant="h6" id="tableTitle" component="div">
-					My requests
+					My request
 				</Typography>
+				<div className={classes.search}>
+					<TextField
+						id="filled-search"
+						label="Search Here..."
+						inputProps={{ 'aria-label': 'search google maps' }}
+						className={classes.input}
+						onChange={handleSearchChange}
+						value={searchKey}
+						variant="standard"
+					/>
+					{/* <InputBase
+						variant="outlined"
+					
+						placeholder="S"
+						
+					/> */}
+					<IconButton
+						type="submit"
+						className={classes.iconButton}
+						aria-label="search"
+						onClick={handleSearchChange}
+					>
+						<SearchIcon />
+					</IconButton>
+				</div>
 			</Toolbar>
 			<Table className={classes.table} aria-label="caption table">
 				<TableHead>
@@ -153,7 +189,7 @@ const RequestsTable = () => {
 					</TableRow>
 				</TableHead>
 				<TableBody>
-					{rows.length > 1 ? (
+					{search === false ? rows.length >= 1 ? (
 						(rowsPerPage > 0
 							? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
 							: rows).map((row) => (
@@ -188,13 +224,42 @@ const RequestsTable = () => {
 								You have no Requests
 							</TableCell>
 						</TableRow>
+					) : results.length >= 1 ? (
+						(rowsPerPage > 0
+							? results.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+							: results).map((row) => (
+							<TableRow key={row.id} hover style={{ cursor: 'pointer' }}>
+								<TableCell component="th" scope="row">
+									{row.type}
+								</TableCell>
+								<TableCell align="center">{row.from}</TableCell>
+								<TableCell align="center">{row.to}</TableCell>
+								<TableCell align="center">{row.departureDate}</TableCell>
+								<TableCell align="center">{row.returnDate}</TableCell>
+								<TableCell align="center">
+									{row.status == 'pending' ? (
+										<Chip className={classes.pending} label={row.status} variant="outlined" />
+									) : row.status == 'approved' ? (
+										<Chip className={classes.approved} label={row.status} variant="outlined" />
+									) : (
+										<Chip className={classes.rejected} label={row.status} variant="outlined" />
+									)}
+								</TableCell>
+							</TableRow>
+						))
+					) : (
+						<TableRow>
+							<TableCell colspan="6" align="center">
+								You have no Requests with that keyword
+							</TableCell>
+						</TableRow>
 					)}
 				</TableBody>
 			</Table>
 			<TablePagination
 				rowsPerPageOptions={[ 5, 10, 25 ]}
 				component="div"
-				count={rows.length || 0}
+				count={search === true ? results.length : rows.length || 0}
 				rowsPerPage={rowsPerPage}
 				page={page}
 				onChangePage={handleChangePage}
