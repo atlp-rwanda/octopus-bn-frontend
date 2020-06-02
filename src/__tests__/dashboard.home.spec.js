@@ -30,4 +30,5 @@ describe('Home component', () => {
 		const paginate = getByTestId("paginator")
 		fireEvent.change(paginate, { target: { page: 5 } })
 	  });
+	
 });
