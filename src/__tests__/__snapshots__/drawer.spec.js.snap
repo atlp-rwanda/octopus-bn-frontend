@@ -269,6 +269,44 @@ exports[`LOST should render ResponsiveDrawer component 1`] = `
                   </div>
                 </a>
                 <a
+                  href="/chat"
+                  style="text-decoration: none; color: rgb(0, 0, 0);"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="MuiListItemIcon-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiListItemText-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                      >
+                        Chat
+                      </span>
+                    </div>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </div>
+                </a>
+                <a
                   href="/add-accommodation"
                   style="text-decoration: none; color: rgb(0, 0, 0);"
                 >

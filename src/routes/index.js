@@ -14,60 +14,41 @@ import PasswordResetEmail from '../views/PasswordResetEmail';
 import ResetPassword from '../views/ResetPassword';
 import Message from '../views/Message';
 import addAccommodation from '../views/Dashboard/addAccommodationPage';
-import Home from "../components/Home";
-import addRooms from "../views/Dashboard/CreateRooms";
-import TravelAdminRoute from "./travelAdminRoutes";
-import SuperAdminRoute from "./superAdminRoutes";
-
+import Home from '../components/Home';
+import addRooms from '../views/Dashboard/CreateRooms';
+import TravelAdminRoute from './travelAdminRoutes';
+import SuperAdminRoute from './superAdminRoutes';
+import Chat from '../views/Dashboard/Chat';
 
 export default class index extends Component {
-  render() {
-    return (
-      <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/Message" exact component={Message} />
-        <Route path="/signup" exact component={Signup} />
-        <Route path="/verify-email" exact component={Confirm} />
-        <Route path="/social-login" exact component={SocialLogin} />
-        <Route path="/profile" exact component={Profile} />
-        <Route
-          path="/password-reset-email"
-          exact
-          component={PasswordResetEmail}
-        />
-        <Route path="/reset-password/:token" exact component={ResetPassword} />
-        <DashboardRoot>
-          <Route
-            component={({ match }) => (
-              <div>
-                <Route path="/dashboard" exact component={Home}/>
-                <Route path="/requests" exact component={Requests} />
-                <Route
-                  path="/profile-settings"
-                  exact
-                  component={ProfileSettings}
-                />
-                <SuperAdminRoute
-                  path="/user-roles"
-                  exact
-                  component={UserRoles}
-                />
-                <TravelAdminRoute
-                  path="/add-accommodation"
-                  exact
-                  component={addAccommodation}
-                />
-                <TravelAdminRoute
-                  path="/add-rooms"
-                  exact
-                  component={addRooms}
-                />
-              </div>
-            )}
-          />
-        </DashboardRoot>
-        <Route component={Lost} />
-      </Switch>
-    );
-  }
+	render() {
+		return (
+			<Switch>
+				<Route path="/" exact component={Login} />
+				<Route path="/Message" exact component={Message} />
+				<Route path="/signup" exact component={Signup} />
+				<Route path="/verify-email" exact component={Confirm} />
+				<Route path="/social-login" exact component={SocialLogin} />
+				<Route path="/profile" exact component={Profile} />
+				<Route path="/password-reset-email" exact component={PasswordResetEmail} />
+				<Route path="/reset-password/:token" exact component={ResetPassword} />
+				<DashboardRoot>
+					<Route
+						component={({ match }) => (
+							<div>
+								<Route path="/dashboard" exact component={Home} />
+								<Route path="/requests" exact component={Requests} />
+								<Route path="/chat" exact component={Chat} />
+								<Route path="/profile-settings" exact component={ProfileSettings} />
+								<SuperAdminRoute path="/user-roles" exact component={UserRoles} />
+								<TravelAdminRoute path="/add-accommodation" exact component={addAccommodation} />
+								<TravelAdminRoute path="/add-rooms" exact component={addRooms} />
+							</div>
+						)}
+					/>
+				</DashboardRoot>
+				<Route component={Lost} />
+			</Switch>
+		);
+	}
 }
