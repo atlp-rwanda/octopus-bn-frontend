@@ -127,7 +127,9 @@
       "!src/views/Dashboard/addAccommodationPage.js",
       "!src/views/Message.js",
       "!src/helpers/*",
-      "!src/redux/actions/accommodationAction.js"
+      "!src/redux/actions/accommodationAction.js",
+      "!src/redux/actions/likeOrUnlikeAction.js",
+      "!src/components/Home.js"
     ]
   }
 }

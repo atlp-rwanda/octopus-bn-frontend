@@ -13,11 +13,11 @@ import HomeTopView from "../views/Dashboard/HomeTopView";
 import customStyles from "../styles/dashboard.module.css";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
-import ThumbDownIcon from "@material-ui/icons/ThumbDown";
 import Pagination from "@material-ui/lab/Pagination";
 import StarIcon from "@material-ui/icons/Star";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CircularProgress from '@material-ui/core/CircularProgress';
+import {likeOrUnlike} from '../redux/actions/likeOrUnlikeAction';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: "56.25%", // 16:9
+    paddingTop: "56.25%",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -49,13 +49,23 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const Home = ({ data, viewAllAccommodations }) => {
-  useEffect(() => {
-    viewAllAccommodations(page);
-  }, [page]);
+const Home = ({ data, viewAllAccommodations, likeOrUnlike }) => {
+
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const [page, setPage] = React.useState(1);
+  const [accommodations, setAccommodations] = React.useState([]);
+
+  useEffect(() => {
+    viewAllAccommodations(page);
+  }, [page]);
+
+  useEffect(() => {
+    if(data.allAccommodations.length){
+      setAccommodations(data.allAccommodations);
+    }
+  })
+
   const handleChange = (event, value) => {
     setPage(value);
     viewAllAccommodations(value);
@@ -65,7 +75,69 @@ const Home = ({ data, viewAllAccommodations }) => {
     setExpanded(!expanded);
   };
 
-  const numberOfAccommodations = data.allAccommodations.length;
+  const likeOrUnlikeAccomHandler = (accommodationId) => {
+    likeOrUnlike(accommodationId);
+    const accommodationIndex = accommodations.findIndex((acc => acc.id === accommodationId));
+    const likes = accommodations[accommodationIndex].AcommodationLikesAndUnlikes;
+    const {id} = JSON.parse(localStorage.getItem('bn-user-data'));
+    const isItLiked = likes.find( (like) => like.userId === id && like.accommodationId === accommodationId);
+    const likeIndex = likes.findIndex( (like) => like.userId === id && like.accommodationId === accommodationId);
+
+    !isItLiked?likes.push({userId: id, accommodationId}): likes.splice(likeIndex, 1);
+    setAccommodations(accommodations.splice(accommodationIndex, 1, accommodations[accommodationIndex]));
+
+  }
+
+  const numberOfAccommodations = accommodations.length;
+
+  const renderLikeUnLikeDynamically = (accommodation) => {
+    const {id} = JSON.parse(localStorage.getItem('bn-user-data'));
+    const isItLiked = accommodation.AcommodationLikesAndUnlikes.find( (like) => like.userId === id && like.accommodationId === accommodation.id);
+    return (
+      isItLiked?
+      <div>
+      <IconButton onClick= {likeOrUnlikeAccomHandler.bind(this,accommodation.id)} aria-label="add to favorites">
+      <ThumbUpIcon style={{ color: "#42A6F5" }} />
+    </IconButton>
+    { accommodation.AcommodationLikesAndUnlikes.length!=0?
+      <span>
+        {
+          accommodation.AcommodationLikesAndUnlikes.length >1?
+         <span>{accommodation.AcommodationLikesAndUnlikes.length} 
+         <span style={{ color: "#42A6F5" }}>&nbsp;likes</span>
+         </span>: 
+         <span>
+           {accommodation.AcommodationLikesAndUnlikes.length} 
+           <span style={{ color: "#42A6F5" }}>&nbsp;like</span>
+           </span>
+        }
+      </span>
+      : <></>
+    }
+    </div>
+    :
+    <div>
+      <IconButton onClick= {likeOrUnlikeAccomHandler.bind(this,accommodation.id)} aria-label="add to favorites">
+      <ThumbUpIcon style={{ color: "#808080" }} />
+    </IconButton>
+    { accommodation.AcommodationLikesAndUnlikes.length!=0?
+      <span>
+        {
+          accommodation.AcommodationLikesAndUnlikes.length >1?
+         <span>{accommodation.AcommodationLikesAndUnlikes.length} 
+         <span style={{ color: "#808080" }}>&nbsp;likes</span>
+         </span>: 
+         <span>
+           {accommodation.AcommodationLikesAndUnlikes.length} 
+           <span style={{ color: "#808080" }}>&nbsp;like</span>
+           </span>
+        }
+      </span>
+      : <></>
+    }
+    </div>
+    )
+  };
   
   return (
     <div>
@@ -79,7 +151,7 @@ const Home = ({ data, viewAllAccommodations }) => {
               marginLeft: "500px",
             }}
             variant="indeterminate" disableShrink size={24} thickness={4} />
-        ) : data.allAccommodations.length === 0?
+        ) : accommodations === 0?
            <p
             style={{
               display: "inline-block",
@@ -89,9 +161,9 @@ const Home = ({ data, viewAllAccommodations }) => {
            </p>
         :(
           data &&
-          data.allAccommodations 
+          accommodations
           &&
-          data.allAccommodations.map((accommodation) => (
+          accommodations.map((accommodation) => (
             <Card
             key={accommodation.id}
             style={{
@@ -136,12 +208,7 @@ const Home = ({ data, viewAllAccommodations }) => {
               </CardContent>
             </CardActionArea>
             <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <ThumbUpIcon style={{ color: "#42A6F5" }} />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ThumbDownIcon style={{ color: "rgba(63, 61, 86, 0.7)" }}/>
-              </IconButton>
+              {renderLikeUnLikeDynamically(accommodation)}
               <IconButton
                 className={clsx(classes.expand, {
                   [classes.expandOpen]: expanded,
@@ -173,13 +240,14 @@ const Home = ({ data, viewAllAccommodations }) => {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.accommodation,
+    data: state.accommodation
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     viewAllAccommodations: (page) => dispatch(viewAllAccommodations(page)),
+    likeOrUnlike: (accommodationId) => dispatch(likeOrUnlike(accommodationId))
   };
 };
 

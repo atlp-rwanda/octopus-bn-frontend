@@ -2,7 +2,7 @@ import axios from 'axios';
 import {
    VIEW_ALL_ACCOMMODATIONS, 
    VIEW_ALL_ACCOMMODATIONS_SUCCESS,
-   VIEW_ALL_ACCOMMODATIONS_FAILURE
+   VIEW_ALL_ACCOMMODATIONS_FAILURE,
   } from '../types/accommodationTypes';
 
 
