@@ -122,6 +122,8 @@
       "!src/redux/actions/*",
       "!src/stories/*",
       "!src/components/AddAccommodationForm.js",
+      "!src/components/RequestsTable.js",
+      "!src/components/DrawerComponents.js",
       "!src/views/Dashboard/addAccommodationPage.js",
       "!src/views/Message.js",
       "!src/helpers/*",

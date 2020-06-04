@@ -8,8 +8,8 @@ import { getRequestsAction } from '../../redux/actions/requestsAction';
 import { withRouter } from 'react-router-dom';
 
 class Requests extends Component {
-	componentDidMount() {
-		this.props.getRequestsAction();
+	async componentDidMount() {
+		await this.props.getRequestsAction();
 	}
 	render() {
 		return (
