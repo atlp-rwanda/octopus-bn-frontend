@@ -273,7 +273,7 @@ exports[`LOGIN should render login component 1`] = `
               Sign In
             </p>
             <p>
-              Please fill the form
+              Please fill the form.
             </p>
             <div>
               <button

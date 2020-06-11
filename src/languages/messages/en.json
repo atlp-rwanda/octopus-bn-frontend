@@ -1,7 +1,7 @@
 {
   "bn-value": "Making company travel and accommodation easy and convenient.",
   "sign-in": "Sign In",
-  "fill-form": "Please fill the form",
+  "fill-form": "Please fill the form.",
   "no-account": "Have no account?",
   "forget-password": "Forgot password?",
   "or": "Or",
@@ -63,5 +63,21 @@
   "password_reset": "Your password was reset successfully",
   "sign-in-click": "Please click to sign in",
   "password_reset_email": "We’ve emailed you instructions for setting a new password if an account exists with the email you entered. You should receive them shortly.",
-  "reset-email": "Get Reset Email"
+  "reset-email": "Get Reset Email",
+
+  "trip-type-error" : "Please select a trip type.",
+  "from-country-error" : "Please select a departure country.",
+  "to-country-error" : "Please select a destination country.",
+  "from-city-error" : "Please select a departure city.",
+  "to-city-error" : "Please select a destination city.",
+  "stop-country-error" : "Please select a stop country.",
+  "stop-city-error" : "Please select a stop city.",
+  "accommodation-error": "Please select an accommodation.",
+  "departure-date-error" : "Invalid  departure date.",
+  "second-departure-date-error": "Invalid  departure date.",
+  "return-date-error" : "Invalid  return date.",
+  "arrival-date-error" : "Invalid arrival date.",
+  "reason-error" : "Please provide a reason."
+
+
 }

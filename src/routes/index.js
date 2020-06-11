@@ -19,6 +19,9 @@ import addRooms from '../views/Dashboard/CreateRooms';
 import TravelAdminRoute from './travelAdminRoutes';
 import SuperAdminRoute from './superAdminRoutes';
 import AvailRequests from '../views/Dashboard/AvailRequests';
+import RequesterRoute from './requesterRoute';
+import NewTripRequestView from '../views/Dashboard/NewTripRequest';
+
 
 export default class index extends Component {
 	render() {
@@ -42,6 +45,7 @@ export default class index extends Component {
 								<SuperAdminRoute path="/user-roles" exact component={UserRoles} />
 								<TravelAdminRoute path="/add-accommodation" exact component={addAccommodation} />
 								<TravelAdminRoute path="/add-rooms" exact component={addRooms} />
+                				<RequesterRoute path="/new-trip-request" exact component={NewTripRequestView} />
 								<Route path="/avail-requests" exact component={AvailRequests} />
 							</div>
 						)}

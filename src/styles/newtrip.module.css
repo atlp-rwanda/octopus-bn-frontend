@@ -11,18 +11,6 @@
   width: 65%;
 }
 
-.forms_plus {
-  margin-left: 60px;
-  margin-top: 50px;
-  width: 1300px;
-}
-
-.forms_plus_second {
-  margin-left: 100px;
-  margin-top: 5px;
-  width: 1200px;
-}
-
 .wrap {
   width: 45%;
   height: auto;
@@ -31,30 +19,9 @@
   margin-left: auto;
 }
 
-.wrap2 {
-  width: 60%;
-  height: auto;
-  margin-top: 15vh;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.third_wrap {
-  width: 45%;
-  height: auto;
-  margin-top: 13vh;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .inputs {
   width: 100%;
-  margin-top: 100px;
-}
-
-.inputs2 {
-  width: 60%;
-  margin-top: 100px;
+  position: relative;
 }
 
 .text_wrap {
@@ -66,26 +33,21 @@
   height: auto;
 }
 
+.text_field_styles{
+  margin-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: -20px;
+}
+
 .form_top_text {
   text-align: center;
   margin-bottom: 5vh;
-}
-
-.link_container {
-  position: relative;
-  height: 7vh;
-  width: 40%;
-  margin-bottom: -10%;
 }
 
 .link {
   color: #2196f3;
   margin-bottom: 30px;
   float: left;
-}
-.linkLabel {
-  color: #2196f3;
-  text-decoration: none;
 }
 
 .fs_title {
@@ -142,62 +104,110 @@
   height: 363px;
   left: 431px;
   top: 243px;
-
   opacity: 0.1;
 }
-.first_wrap {
+
+.form_subtitle{
+  text-align: center;
+  color: #000;
+}
+.wrap1{
   width: 60%;
   height: auto;
-  margin-top: 15vh;
+  margin-top: 4vh;
   margin-right: auto;
   margin-left: auto;
 }
 
-.side_items {
-  text-transform: none;
+.textarea_styles {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.progress_buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.stops_title{
   width: 100%;
 }
 
-.logo_container {
-  width: 40px;
+
+.dates_stops_grid{
   height: auto;
-  padding-top: 4px;
-  padding-left: 5px;
-  margin-left: 18px;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.title {
-  font-size: 18px;
-  color: #2c3e50;
-  margin-left: 5px;
-  text-align: center;
-  align-items: inherit;
-  justify-content: inherit;
+.reason_area{
+  width: 100%;
 }
 
-.role_title {
-  margin-top: 4em;
-  float: left;
-  width: 80%;
-  margin-left: 2em;
+.finish_line{
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
 }
 
-.lang_container {
-  margin-top: 4em;
-  float: right;
-  width: 20%;
+.stops_fields {
+  margin-bottom: 15px;
+  padding-top: 5px;
+  width: 100%;
+}
+.helper_text_error{
+  bottom: 0;
+  position: absolute;
 }
 
-.progress {
-  width: 32px !important;
-  height: 27px !important;
+.stops_popper{
+  display: block;
+  width: 50%;
 }
 
-.role_success {
-  color: green;
-  margin-left: 80px;
-  margin-top: 40px;
+.stops_popper .stops_inputs{
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: -20px;
 }
+
+
+.stops_calendar_holder{
+  position: relative;
+}
+
+.stops_calendar_holder .inputs {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: -20px;
+}
+
+.stops_div_styles {
+  margin-top: '25%';
+  padding: 0px 60px 15px 60px;
+  border-radius: 15px;
+};
+
+.MuiDialog-scrollPaper{
+  position: relative;
+}
+
+
+.add_stop_button{
+  margin-top: 20px;
+}
+
+.modal_popper_styles{
+  margin-top: 20px;
+}
+
+
 
 @media screen and (max-width: 500px) {
   .side {
@@ -209,36 +219,14 @@
     float: left;
     width: 100%;
   }
-  .forms_plus {
-    margin-left: auto;
-    margin-top: auto;
-    width: auto;
-  }
 
-  .forms_plus_second {
-    margin-left: auto;
-    margin-top: auto;
-    width: auto;
-  }
-
-  .wrap,
-  .first_wrap,
-  .third_wrap {
+  .wrap,wrap1 {
     width: 80%;
     height: auto;
     margin-top: 5vh;
     margin-right: auto;
     margin-left: auto;
   }
-  
-  .wrap1{
-    width: 60%;
-    height: auto;
-    margin-top: 15vh;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
   .text_wrap {
     margin-left: 10%;
     margin-right: 10%;
@@ -259,5 +247,20 @@
   }
   .link {
     margin-top: 10px;
+  }
+  .textarea_styles {
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .form_buttons {
+    align-content: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .helper_text_error{
+    margin-top: 5px;
+    position: absolute;
   }
 }

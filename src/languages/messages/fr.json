@@ -1,7 +1,7 @@
 {
   "bn-value": "Rendre le voyage et l'hébergement de l'entreprise faciles et pratiques.",
   "sign-in": "Se connecter",
-  "fill-form": "Veuillez remplir le formulaire",
+  "fill-form": "Veuillez remplir le formulaire.",
   "no-account": "Vous n'avez pas de compte?",
   "forget-password": "Mot de passe oublié?",
   "or": "Ou",
@@ -66,5 +66,19 @@
   "password_reset": "Your password was reset successfully",
   "sign-in-click": "Votre mot de passe a été réinitialisé avec succès",
   "password_reset_email": "Nous vous avons envoyé par e - mail des instructions pour définir un nouveau mot de passe si un compte existe avec l 'e-mail que vous avez entré. Vous devriez les recevoir sous peu.",
-  "reset-email": "obtenir un e-mail de réinitialisation"
+  "reset-email": "obtenir un e-mail de réinitialisation",
+
+  "trip-type-error" : "Veuillez sélectionner un type de voyage.",
+  "from-country-error" : "Veuillez sélectionner un pays de départ.",
+  "to-country-error" : "Veuillez sélectionner un pays de destination.",
+  "from-city-error" : "Veuillez sélectionner une ville de départ.",
+  "to-city-error" : "Veuillez sélectionner une ville de destination.",
+  "stop-country-error" : "Veuillez sélectionner un pays d'arrêt.",
+  "stop-city-error" : "Veuillez sélectionner une ville d'arrêt.",
+  "accomodation-error": "Veuillez sélectionner un logement.",
+  "departure-date-error" : "Date de départ invalide.",
+  "second-departure-date-error": "Date de départ invalide.",
+  "return-date-error" : "Date de retour invalide.",
+  "arrival-date-error" : "Date d'arrivée non invalide",
+  "reason-error" : "Veuillez fournir une raison."
 }
